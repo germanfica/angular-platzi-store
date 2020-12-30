@@ -13,3 +13,9 @@
 </ul>
 
 <button (click)="addItem()">Add item</button>
+
+<div *ngFor="let product of products" >
+  {{ product.title }}
+  <img [src]="product.image" alt="" width="300" height="300">
+  {{ product.price }}
+</div>
