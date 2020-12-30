@@ -4,6 +4,8 @@
   <p>{{ title }}</p>
 </div>
 
+<app-product></app-product>
+
 <ul>
   <li *ngIf="veganFoods.length === 0">La lista está vacía.</li>
   <li *ngFor="let veganFood of veganFoods; index as i; first as isFirst">
@@ -13,9 +15,3 @@
 </ul>
 
 <button (click)="addItem()">Add item</button>
-
-<div *ngFor="let product of products" >
-  {{ product.title }}
-  <img [src]="product.image" alt="" width="300" height="300">
-  {{ product.price }}
-</div>

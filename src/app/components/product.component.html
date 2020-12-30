@@ -1,0 +1,7 @@
+<h3>I'm a product component</h3>
+
+<div *ngFor="let product of products" >
+    {{ product.title }}
+    <img [src]="product.image" alt="" width="300" height="300">
+    <strong>{{ product.price }}</strong>
+</div>
