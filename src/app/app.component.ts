@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'platzi-store';
+  isVisible = true;
+  veganFoods = ['🍎', '🍏', '🍇', '🍌', '🍑'];
+
+  addItem(){
+    this.veganFoods.push('New item')
+  }
+
+  deleteItem(itemIndex: number) {
+    this.veganFoods.splice(itemIndex, 1);
+  }
 }
