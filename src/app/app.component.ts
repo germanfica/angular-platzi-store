@@ -56,15 +56,15 @@ export class AppComponent {
     }
   ];
 
-  addItem(){
-    this.veganFoods.push('New item')
+  addItem(): void{
+    this.veganFoods.push('New item');
   }
 
-  deleteItem(itemIndex: number) {
+  deleteItem(itemIndex: number): void {
     this.veganFoods.splice(itemIndex, 1);
   }
 
-  clickProduct(id: number) {
+  clickProduct(id: number): void {
     console.log('product');
     console.log(id);
   }
