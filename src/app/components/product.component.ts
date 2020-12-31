@@ -1,54 +1,17 @@
-import { Component } from '@angular/core'
+import { Component, Input, Output, EventEmitter } from '@angular/core'
 import { Product } from '../modules/product.module';
 
-
+// Decorador
 @Component({
     selector: 'app-product',
     templateUrl: './product.component.html'
 })
 export class ProductComponent {
-    products: Product[] = [
-        {
-          id: '1',
-          image: 'assets/images/camiseta.png',
-          title: 'Camiseta',
-          price: 80000,
-          description: 'bla bla bla bla bla'
-        },
-        {
-          id: '2',
-          image: 'assets/images/hoodie.png',
-          title: 'Hoodie',
-          price: 80000,
-          description: 'bla bla bla bla bla'
-        },
-        {
-          id: '3',
-          image: 'assets/images/mug.png',
-          title: 'Hoodie',
-          price: 80000,
-          description: 'bla bla bla bla bla'
-        },
-        {
-          id: '4',
-          image: 'assets/images/pin.png',
-          title: 'Pin',
-          price: 80000,
-          description: 'bla bla bla bla bla'
-        },
-        {
-          id: '5',
-          image: 'assets/images/stickers1.png',
-          title: 'Stickers 1',
-          price: 80000,
-          description: 'bla bla bla bla bla'
-        },
-        {
-          id: '6',
-          image: 'assets/images/stickers2.png',
-          title: 'Stickers 2',
-          price: 80000,
-          description: 'bla bla bla bla bla'
-        }
-      ];
+    @Input() product: Product = {} as Product;
+    @Output() productClicked: EventEmitter<any> = new EventEmitter();
+
+    addCart() {
+        console.log('Agregar al carrito');
+        this.productClicked.emit(this.product.id);
+    }
 }

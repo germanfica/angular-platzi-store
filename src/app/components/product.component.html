@@ -1,7 +1,4 @@
-<h3>I'm a product component</h3>
-
-<div *ngFor="let product of products" >
-    {{ product.title }}
-    <img [src]="product.image" alt="" width="300" height="300">
-    <strong>{{ product.price }}</strong>
-</div>
+<h3>{{ product.title }}</h3>
+<img [src]="product.image" alt="" width="300" height="300">
+<strong>${{ product.price }}</strong>
+<p><button (click)="addCart()">Agregar al carrito</button></p>
