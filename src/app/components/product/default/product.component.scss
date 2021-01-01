@@ -2,6 +2,8 @@
 // @import 'src/app/app.component';
 
 :host {
+  display: block;
+  margin: 4px;
   margin-bottom: $card-margin-bottom;
   border: none;
   transition: all 0.3s ease;
