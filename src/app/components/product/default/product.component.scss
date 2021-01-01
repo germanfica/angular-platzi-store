@@ -34,6 +34,10 @@
     border-bottom-left-radius: $card-border-radious;
     border-bottom-right-radius: $card-border-radious;
   }
+
+  .card-bottom {
+    border: 1px solid $secondary-color;
+  }
 }
 
 img {
