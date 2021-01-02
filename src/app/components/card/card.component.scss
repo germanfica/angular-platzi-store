@@ -1,0 +1,15 @@
+:host {
+    font-family:fantasy;
+
+    .container {
+        display: grid;
+        // grid-template-columns: 25% 200px 25%;
+        // grid-template-rows: 30% 200px;
+        grid-template: 30% 200px / 25% 200px 25%;
+    }
+    .item {
+        background: lightblue;
+        padding: 10px;
+        border: solid red;
+    }
+}
