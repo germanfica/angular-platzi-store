@@ -8,7 +8,7 @@ import { Product } from './components/product/product.module';
 })
 export class AppComponent {
   title = 'platzi-store';
-  isVisible = true;
+  isVisible = false;
   veganFoods = ['🍎', '🍏', '🍇', '🍌', '🍑'];
 
   products: Product[] = [
