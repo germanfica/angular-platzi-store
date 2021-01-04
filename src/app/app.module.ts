@@ -11,6 +11,7 @@ import { HomeComponent } from './components/home/home.component';
 import { StoreComponent } from './components/store/store.component';
 import { StoreV2Component } from './components/store-v2/store-v2.component';
 import { StoreV12Component } from './components/store-v12/store-v12.component';
+import { StoreV13Component } from './components/store-v13/store-v13.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { StoreV12Component } from './components/store-v12/store-v12.component';
     HomeComponent,
     StoreComponent,
     StoreV2Component,
-    StoreV12Component
+    StoreV12Component,
+    StoreV13Component
   ],
   imports: [
     BrowserModule,
