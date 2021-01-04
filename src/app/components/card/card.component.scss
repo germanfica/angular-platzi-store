@@ -5,10 +5,18 @@
         display: grid;
         // grid-template-columns: 25% 200px 25%;
         // grid-template-rows: 30% 200px;
-        grid-template: 30% 200px / 25% 200px 25%;
+        // Fracción
+        // EL FR ES LA CLAVEEE DEL EXITOOO!!!!
+        //grid-template: 30% 200px / 1fr 1fr 1fr;
+        grid-template: 30% 200px / minmax(200px, 1fr) 1fr 1fr 1fr;
+        //grid-template: 30% 200px / 25% 200px 100px;
+        // ES INEXACTO
+        //grid-template: 30% 200px / 33% 33% 33%;
         // row-gap: 30px;
         // column-gap: 30px;
-        gap: 30px 10px;
+        gap: 10px;
+        //gap: 30px 10px;
+        // Fracción
     }
     .item {
         background: lightblue;
@@ -23,7 +31,8 @@
         // display: subgrid;
         // display: inline-grid;
         display: grid;
-        grid-template: 50% 50% 50% / 200px 200px 200px;
+        grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+        //grid-template: 50% 50% 50% / 200px 200px 200px;
     }
     .item .item {
         background: #7366ff;
