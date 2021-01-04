@@ -10,6 +10,7 @@ import { CardComponent } from './components/card/card.component';
 import { HomeComponent } from './components/home/home.component';
 import { StoreComponent } from './components/store/store.component';
 import { StoreV2Component } from './components/store-v2/store-v2.component';
+import { StoreV12Component } from './components/store-v12/store-v12.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { StoreV2Component } from './components/store-v2/store-v2.component';
     CardComponent,
     HomeComponent,
     StoreComponent,
-    StoreV2Component
+    StoreV2Component,
+    StoreV12Component
   ],
   imports: [
     BrowserModule,
