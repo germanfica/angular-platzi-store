@@ -27,6 +27,24 @@ export class InstagramComponent implements OnInit {
       image: 'assets/images/instagram/compu3.jpg',
       likes: 150,
       comments: 7
+    },
+    {
+      id: '4',
+      image: 'assets/images/instagram/compu.jpg',
+      likes: 100,
+      comments: 10
+    },
+    {
+      id: '5',
+      image: 'assets/images/instagram/compu2.jpg',
+      likes: 125,
+      comments: 13
+    },
+    {
+      id: '6',
+      image: 'assets/images/instagram/compu3.jpg',
+      likes: 150,
+      comments: 7
     }
   ];
 
