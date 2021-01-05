@@ -7,6 +7,8 @@ import { Instagram  } from './instagram.module';
   styleUrls: ['./instagram.component.scss']
 })
 export class InstagramComponent implements OnInit {
+  likeIcon: string = 'assets/icons/thumb_up-white-18dp.svg';
+  commentIcon: string = 'assets/icons/mode_comment-white-18dp.svg';
   posts: Instagram[] = [
     {
       id: '1',

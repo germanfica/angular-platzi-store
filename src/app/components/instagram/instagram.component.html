@@ -8,8 +8,14 @@
         </figure>
         <span class="post-overlay">
             <p>
-                <span class="post-likes">{{ post.likes }}</span>
-                <span class="post-comments">{{ post.comments }}</span>
+                <span class="post-likes">
+                    <img [src]="likeIcon" alt="">
+                    {{ post.likes }}
+                </span>
+                <span class="post-comments">
+                    <img [src]="commentIcon" alt="">
+                    {{ post.comments }}
+                </span>
             </p>
         </span>
     </a>
@@ -20,8 +26,14 @@
         </figure>
         <span class="post-overlay">
             <p>
-                <span class="post-likes">{{ post.likes }}</span>
-                <span class="post-comments">{{ post.comments }}</span>
+                <span class="post-likes">
+                    <img [src]="likeIcon" alt="">
+                    {{ post.likes }}
+                </span>
+                <span class="post-comments">
+                    <img [src]="commentIcon" alt="">
+                    {{ post.comments }}
+                </span>
             </p>
         </span>
     </a>
