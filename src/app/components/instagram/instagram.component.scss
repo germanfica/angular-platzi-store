@@ -6,6 +6,13 @@
         text-align: center;
         display: block;
     }
+    // Grid
+    .post-list {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(100px, 293px));
+        justify-content: center;
+        gap: 28px;
+    }
     // post
     .post {
         cursor: pointer;
@@ -44,5 +51,10 @@
         font-weight: bold;
         text-align: center;
         display: inline-block;
+    }
+    @media screen and (max-width: 768px) {
+        .post-list {
+            gap: 3px;
+        }
     }
 }
