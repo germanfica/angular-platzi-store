@@ -1,7 +1,7 @@
 <p>pinterest works!</p>
 <div class="container">
 
-    <div *ngFor="let item of items" [item]="item" class="item level-{{item.id}}">
+    <div *ngFor="let item of items" class="item level-{{item.id}}">
         <img [src]="item.image" alt="">
     </div>
 </div>
