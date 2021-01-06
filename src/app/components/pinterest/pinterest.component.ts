@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Pinterest } from './pinterest.module';
 
 @Component({
   selector: 'app-pinterest',
@@ -6,6 +7,80 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pinterest.component.scss']
 })
 export class PinterestComponent implements OnInit {
+  items: Pinterest[] = [
+    {
+      id: '1',
+      image: 'assets/images/pinterest/landing.jpg'
+    },
+    {
+      id: '2',
+      image: 'assets/images/pinterest/tshirt.jpg'
+    },
+    {
+      id: '3',
+      image: 'assets/images/pinterest/house.jpg'
+    },
+    {
+      id: '1',
+      image: 'assets/images/pinterest/landing.jpg'
+    },
+    {
+      id: '2',
+      image: 'assets/images/pinterest/tshirt.jpg'
+    },
+    {
+      id: '3',
+      image: 'assets/images/pinterest/house.jpg'
+    },
+    {
+      id: '1',
+      image: 'assets/images/pinterest/landing.jpg'
+    },
+    {
+      id: '2',
+      image: 'assets/images/pinterest/tshirt.jpg'
+    },
+    {
+      id: '3',
+      image: 'assets/images/pinterest/house.jpg'
+    },
+    {
+      id: '1',
+      image: 'assets/images/pinterest/landing.jpg'
+    },
+    {
+      id: '2',
+      image: 'assets/images/pinterest/tshirt.jpg'
+    },
+    {
+      id: '3',
+      image: 'assets/images/pinterest/house.jpg'
+    },
+    {
+      id: '1',
+      image: 'assets/images/pinterest/landing.jpg'
+    },
+    {
+      id: '2',
+      image: 'assets/images/pinterest/tshirt.jpg'
+    },
+    {
+      id: '3',
+      image: 'assets/images/pinterest/house.jpg'
+    },
+    {
+      id: '1',
+      image: 'assets/images/pinterest/landing.jpg'
+    },
+    {
+      id: '2',
+      image: 'assets/images/pinterest/tshirt.jpg'
+    },
+    {
+      id: '3',
+      image: 'assets/images/pinterest/house.jpg'
+    }
+  ];
 
   constructor() { }
 
