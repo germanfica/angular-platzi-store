@@ -17,6 +17,7 @@ import { StoreV15Component } from './components/store-v15/store-v15.component';
 import { InstagramComponent } from './components/instagram/instagram.component';
 import { PinterestComponent } from './components/pinterest/pinterest.component';
 import { PlatziComponent } from './components/platzi/platzi.component';
+import { ExponentialPipe } from './pipes/exponential/exponential.pipe';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { PlatziComponent } from './components/platzi/platzi.component';
     StoreV15Component,
     InstagramComponent,
     PinterestComponent,
-    PlatziComponent
+    PlatziComponent,
+    ExponentialPipe
   ],
   imports: [
     BrowserModule,
