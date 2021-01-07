@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Pinterest } from './pinterest.module';
+import { Pinterest } from '../../models/pinterest';
 
 @Component({
   selector: 'app-pinterest',

@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProductComponent } from './components/product/default/product.component';
+import { ProductComponent } from './components/product/product.component';
 import { CartComponent } from './components/cart/cart.component';
 import { CardComponent } from './components/card/card.component';
 import { HomeComponent } from './components/home/home.component';
@@ -35,7 +35,7 @@ import { ExponentialPipe } from './pipes/exponential/exponential.pipe';
     InstagramComponent,
     PinterestComponent,
     PlatziComponent,
-    ExponentialPipe
+    ExponentialPipe,
   ],
   imports: [
     BrowserModule,
