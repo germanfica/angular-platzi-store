@@ -20,15 +20,16 @@
     position: relative;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: $light-gray;
-    
-    >span {
-      font-size: $card-header-span-size;
-      color: $card-header-span-color;
-      margin-top: 5px;
-      display: block;
-      letter-spacing: 1px;
-    }
   }
+
+  .card-header span {
+    font-size: $card-header-span-size;
+    color: $card-header-span-color;
+    margin-top: 5px;
+    display: block;
+    letter-spacing: 1px;
+  }
+
   .card-footer {
     background-color: $card-footer-bg-color;
     border-top: $card-border-color;
@@ -40,32 +41,32 @@
   .card-bottom {
     border: 1px solid $secondary-color;
   }
-}
 
-img {
+  img {
     max-width: 100%;
-}
-
-@mixin btn-gradien($deg,$leftcolor,$leftcolor-per,$rightcolor,$rightcolor-per,$font-color){
-  background-image: linear-gradient(to right,$leftcolor 0%,$rightcolor 51%,$leftcolor 100%);
-  border:none;
-  color:$font-color;
-  background-size: auto 200%;
-  transition: all 0.3s ease;
-}
-
-.btn-primary-gradien{
-  
-  @include btn-gradien(60,lighten($primary-color,8%),0%,darken($primary-color,8%),100%,$white);
-  color: $white;
-  &:focus,&:active,&.active{
-      transition: 1.5s;
-      background-position: right center;
-      background-image: linear-gradient(to right, lighten($primary-color,8%),0%,darken($primary-color,8%),100%,$white) !important;
+    // height: 250px;
   }
-}
 
-.btn{
-  padding: $btn-padding;
+  @mixin btn-gradien($deg,$leftcolor,$leftcolor-per,$rightcolor,$rightcolor-per,$font-color){
+    background-image: linear-gradient(to right,$leftcolor 0%,$rightcolor 51%,$leftcolor 100%);
+    border:none;
+    color:$font-color;
+    background-size: auto 200%;
+    transition: all 0.3s ease;
+  }
+
+  .btn-primary-gradien{
+    @include btn-gradien(60,lighten($primary-color,8%),0%,darken($primary-color,8%),100%,$white);
+    color: $white;
+    &:focus,&:active,&.active{
+        transition: 1.5s;
+        background-position: right center;
+        background-image: linear-gradient(to right, lighten($primary-color,8%),0%,darken($primary-color,8%),100%,$white) !important;
+    }
+  }
+
+  .btn{
+    padding: $btn-padding;
+  }
 }
 

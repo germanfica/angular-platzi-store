@@ -1,7 +1,25 @@
-<app-platzi></app-platzi>
+<p>{{ title }}</p>
+  <input type="text" [(ngModel)]="title">
+
+  <ul>
+    <li *ngIf="veganFoods.length === 0">La lista está vacía.</li>
+    <li *ngFor="let veganFood of veganFoods; index as i; first as isFirst">
+      {{i}}/{{veganFoods.length}}. {{veganFood}} <span *ngIf="isFirst">default</span>
+      <button (click)="deleteItem(i)">Delete</button>
+    </li>
+  </ul>
+
+  <button (click)="addItem()">Add item</button>
+
+  <div class="product-grid">
+    <app-product *ngFor="let product of products" (productClicked)="clickProduct($event)" [product]="product">
+    </app-product>
+  </div>
 
 
 <div *ngIf="isVisible">
+  <app-platzi></app-platzi>
+
   <app-pinterest></app-pinterest>
   
   <app-instagram></app-instagram>
@@ -21,22 +39,4 @@
   <app-home></app-home>
 
   <app-card></app-card>
-
-  <p>{{ title }}</p>
-  <input type="text" [(ngModel)]="title">
-
-  <ul>
-    <li *ngIf="veganFoods.length === 0">La lista está vacía.</li>
-    <li *ngFor="let veganFood of veganFoods; index as i; first as isFirst">
-      {{i}}/{{veganFoods.length}}. {{veganFood}} <span *ngIf="isFirst">default</span>
-      <button (click)="deleteItem(i)">Delete</button>
-    </li>
-  </ul>
-
-  <button (click)="addItem()">Add item</button>
-
-  <div class="product-grid">
-    <app-product *ngFor="let product of products" (productClicked)="clickProduct($event)" [product]="product">
-    </app-product>
-  </div>
 </div>
