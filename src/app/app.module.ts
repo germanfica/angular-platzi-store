@@ -18,6 +18,7 @@ import { InstagramComponent } from './components/instagram/instagram.component';
 import { PinterestComponent } from './components/pinterest/pinterest.component';
 import { PlatziComponent } from './components/platzi/platzi.component';
 import { ExponentialPipe } from './pipes/exponential/exponential.pipe';
+import { HighlightDirective } from './directive/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { ExponentialPipe } from './pipes/exponential/exponential.pipe';
     PinterestComponent,
     PlatziComponent,
     ExponentialPipe,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,

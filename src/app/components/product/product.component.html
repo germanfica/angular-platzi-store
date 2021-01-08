@@ -1,4 +1,4 @@
-<h3 class="card-header h5">{{ product.title | uppercase }} <span> {{ product.description | slice:0:10 }} </span></h3>
+<h3 class="card-header h5" appHighlight>{{ product.title | uppercase }} <span> {{ product.description | slice:0:10 }} </span></h3>
 <img [src]="product.image" alt="">
 <div class="card-footer card-bottom">
     <strong>{{ product.price | currency }}</strong>
