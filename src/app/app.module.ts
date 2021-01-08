@@ -19,6 +19,9 @@ import { PinterestComponent } from './components/pinterest/pinterest.component';
 import { PlatziComponent } from './components/platzi/platzi.component';
 import { ExponentialPipe } from './pipes/exponential/exponential.pipe';
 import { HighlightDirective } from './directive/highlight.directive';
+import { ContactComponent } from './components/contact/contact.component';
+import { ProductsComponent } from './components/products/products.component';
+import { DemoComponent } from './components/demo/demo.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +40,10 @@ import { HighlightDirective } from './directive/highlight.directive';
     PinterestComponent,
     PlatziComponent,
     ExponentialPipe,
-    HighlightDirective
+    HighlightDirective,
+    ContactComponent,
+    ProductsComponent,
+    DemoComponent
   ],
   imports: [
     BrowserModule,

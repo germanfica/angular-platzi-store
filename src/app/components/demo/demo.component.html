@@ -1,0 +1,42 @@
+<p>demo works!</p>
+
+<p>{{ title }}</p>
+<input type="text" [(ngModel)]="title">
+
+<ul>
+    <li *ngIf="veganFoods.length === 0">La lista está vacía.</li>
+    <li *ngFor="let veganFood of veganFoods; index as i; first as isFirst">
+        {{i}}/{{veganFoods.length}}. {{veganFood}} <span *ngIf="isFirst">default</span>
+        <button (click)="deleteItem(i)">Delete</button>
+    </li>
+</ul>
+
+<button (click)="addItem()">Add item</button>
+
+<h1>Pipe exponential</h1>
+<input type="text" [(ngModel)]="power">
+{{ power | exponential }}
+
+<div *ngIf="isVisible">
+    <app-platzi></app-platzi>
+  
+    <app-pinterest></app-pinterest>
+    
+    <app-instagram></app-instagram>
+  
+    <app-store-v15></app-store-v15>
+  
+    <app-store-v14></app-store-v14>
+  
+    <app-store-v13></app-store-v13>
+  
+    <app-store-v12></app-store-v12>
+  
+    <app-store-v2></app-store-v2>
+  
+    <app-store></app-store>
+  
+    <app-home></app-home>
+  
+    <app-card></app-card>
+  </div>
