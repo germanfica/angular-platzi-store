@@ -1,0 +1,12 @@
+:host {
+    nav a {
+        padding: 5px;
+        text-decoration: none;
+        color: white;
+        background-color: blue;
+    }
+    nav a.active {
+        color: yellow;
+        font-weight: bold;
+    } 
+}
