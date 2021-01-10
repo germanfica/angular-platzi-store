@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
+import { Product } from './../../models/product';
 import { ProductsService } from './../../core/services/products.service';
 
 @Component({
@@ -8,6 +9,7 @@ import { ProductsService } from './../../core/services/products.service';
   styleUrls: ['./product-detail.component.scss']
 })
 export class ProductDetailComponent implements OnInit {
+  product: Product = {} as Product;
 
   constructor(
     private route: ActivatedRoute,
@@ -22,8 +24,8 @@ export class ProductDetailComponent implements OnInit {
       // const products = this.productsService.getAllProducts();
       // console.log(products);
 
-      const product = this.productsService.getProduct(id);
-      console.log(product);
+      this.product = this.productsService.getProduct(id);
+      console.log(this.product);
     });
   }
 }
