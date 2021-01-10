@@ -1,5 +1,6 @@
 import { isNgTemplate } from '@angular/compiler';
 import { Injectable } from '@angular/core';
+import { element } from 'protractor';
 import { ProductComponent } from 'src/app/components/product/product.component';
 import { Product } from './../../models/product';
 
@@ -60,15 +61,25 @@ export class ProductsService {
 
   //find(item => id === item.id)
   getProduct(id: string): Product {
-    // return this.products.find<Product>();
-    const p: Product = {
-      id: '6',
-      image: 'assets/images/stickers2.png',
-      title: 'Stickers 2',
-      price: 80000,
-      description: 'bla bla bla bla bla'
-    };
+    const product: Product = this.products.find(element => element.id === id) as Product;
 
-    return p;
+    // return this.products.find(element => element.id === id) as Product; // Eso tenia que hacer nada mas
+    // const p: Product = {
+    //   id: '6',
+    //   image: 'assets/images/stickers2.png',
+    //   title: 'Stickers 2',
+    //   price: 80000,
+    //   description: 'bla bla bla bla bla'
+    // };
+
+    // console.log("HELLOOO");
+    // console.log("asd4: " + this.products.find(element => element.id)?.description);
+    
+    // console.log("asd5: " + this.products.find(element => element.id === id)?.image);
+    // https://stackoverflow.com/questions/41336663/console-logresult-returns-object-object-how-do-i-get-result-name
+    // console.log("asd6"+JSON.stringify(product));
+
+    return product;
   }
+
 }
