@@ -65,6 +65,16 @@
     }
   }
 
+  .btn-primary-gradien-description{
+    @include btn-gradien(60,lighten($secondary-color,8%),0%,darken($secondary-color,8%),100%,$white);
+    color: $white;
+    &:focus,&:active,&.active{
+        transition: 1.5s;
+        background-position: right center;
+        background-image: linear-gradient(to right, lighten($secondary-color,8%),0%,darken($secondary-color,8%),100%,$white) !important;
+    }
+  }
+
   .btn{
     padding: $btn-padding;
   }

@@ -3,5 +3,6 @@
 <div class="card-footer card-bottom">
     <strong>{{ product.price | currency }}</strong>
     <p><button (click)="addCart()" class="btn btn-primary-gradien">Agregar al carrito</button></p>
+    <p><button [routerLink]="['/products', product.id]" class="btn btn-primary-gradien-description">Ver detalle</button></p>
     <p>{{ today | date:'medium' }}</p>
 </div>
