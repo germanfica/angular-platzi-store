@@ -59,7 +59,16 @@ export class ProductsService {
   }
 
   //find(item => id === item.id)
-  // getProduct(id: string): Product {
-  //   return this.products.find<Product>();
-  // }
+  getProduct(id: string): Product {
+    // return this.products.find<Product>();
+    const p: Product = {
+      id: '6',
+      image: 'assets/images/stickers2.png',
+      title: 'Stickers 2',
+      price: 80000,
+      description: 'bla bla bla bla bla'
+    };
+
+    return p;
+  }
 }
