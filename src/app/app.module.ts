@@ -28,6 +28,7 @@ import { ContentComponent } from './components/content/content.component';
 import { SwiperModule } from 'swiper/angular';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { LayoutComponent } from './components/layout/layout.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
     FooterComponent,
     ContentComponent,
     PageNotFoundComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    LayoutComponent
   ],
   imports: [
     BrowserModule,
