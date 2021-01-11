@@ -8,7 +8,6 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ProductComponent } from './components/product/product.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
-import { ContactComponent } from './components/contact/contact.component';
 import { ProductsComponent } from './components/products/products.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
@@ -37,7 +36,6 @@ import { HighlightDirective } from './directives/highlight/highlight.directive';
     FooterComponent,
     ProductComponent,
     ProductDetailComponent,
-    ContactComponent,
     ProductsComponent,
     ExponentialPipe,
     HighlightDirective,
@@ -63,7 +61,6 @@ import { HighlightDirective } from './directives/highlight/highlight.directive';
     FooterComponent,
     ProductComponent,
     ProductDetailComponent,
-    ContactComponent,
     ProductsComponent,
     ExponentialPipe,
     HighlightDirective,
