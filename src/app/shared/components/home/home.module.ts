@@ -6,8 +6,8 @@ import { LeftComponent } from './components/left/left.component';
 import { ContentComponent } from './components/content/content.component';
 
 import { HomeRoutingModule } from './home-routing.module';
-import { SharedModule } from './../../shared/shared.module';
-import { CoreModule } from './../../core/core.module';
+import { SharedModule } from './../../../shared/shared.module';
+import { CoreModule } from './../../../core/core.module';
 
 @NgModule({
   declarations: [

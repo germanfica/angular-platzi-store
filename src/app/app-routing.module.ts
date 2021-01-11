@@ -21,7 +21,7 @@ const routes: Routes = [
       },
       {
         path:'home',
-        loadChildren: () => import('./components/home/home.module').then(m => m.HomeModule)
+        loadChildren: () => import('./shared/components/home/home.module').then(m => m.HomeModule)
       },
       {
         path: 'products',
