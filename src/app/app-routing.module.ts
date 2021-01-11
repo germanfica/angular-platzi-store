@@ -5,7 +5,6 @@ import { DemoComponent } from './shared/components/demo/demo.component';
 import { ProductsComponent } from './shared/components/products/products.component';
 import { ContactComponent } from './shared/components/contact/contact.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { ProductsService } from './core/services/products/products.service';
 import { ProductDetailComponent } from './shared/components/product-detail/product-detail.component';
 import { LayoutComponent } from './components/layout/layout.component';
 
