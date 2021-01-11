@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Product } from '../../models/product';
+import { Product } from '../../interfaces/product';
 
 // Decorador
 @Component({

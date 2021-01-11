@@ -2,7 +2,7 @@ import { isNgTemplate } from '@angular/compiler';
 import { Injectable } from '@angular/core';
 import { element } from 'protractor';
 import { ProductComponent } from './../../../shared/components/product/product.component';
-import { Product } from '../../../shared/models/product';
+import { Product } from '../../../shared/interfaces/product';
 
 @Injectable({
   providedIn: 'root'
