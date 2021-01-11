@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
 import { DemoComponent } from './shared/components/demo/demo.component';
-import { ProductsComponent } from './shared/components/products/products.component';
 import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
 import { ProductDetailComponent } from './shared/components/product-detail/product-detail.component';
 import { LayoutComponent } from './shared/components/layout/layout.component';
@@ -24,7 +23,7 @@ const routes: Routes = [
       },
       {
         path: 'products',
-        component: ProductsComponent
+        loadChildren: () => import('./shared/components/products/products.module').then(m => m.ProductsModule)
       },
       {
         path: 'products/:id',
@@ -32,7 +31,7 @@ const routes: Routes = [
       },
       {
         path: 'contact',
-        loadChildren: () => import('./shared/components/contact/contact.module').then(c => c.ContactModule)
+        loadChildren: () => import('./shared/components/contact/contact.module').then(m => m.ContactModule)
       },
     ]
   },
