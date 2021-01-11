@@ -16,17 +16,17 @@ import { StoreV15Component } from './components/store-v15/store-v15.component';
 import { InstagramComponent } from './components/instagram/instagram.component';
 import { PinterestComponent } from './components/pinterest/pinterest.component';
 import { PlatziComponent } from './components/platzi/platzi.component';
-import { ExponentialPipe } from './pipes/exponential/exponential.pipe';
-import { HighlightDirective } from './directive/highlight.directive';
+
 import { ContactComponent } from './components/contact/contact.component';
 import { ProductsComponent } from './components/products/products.component';
 import { DemoComponent } from './components/demo/demo.component';
-import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
 import { SwiperModule } from 'swiper/angular';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { LayoutComponent } from './components/layout/layout.component';
+
+import { SharedModule } from './shared/shared.module';
+import { CoreModule  } from './core/core.module';
 
 @NgModule({
   declarations: [
@@ -43,13 +43,9 @@ import { LayoutComponent } from './components/layout/layout.component';
     InstagramComponent,
     PinterestComponent,
     PlatziComponent,
-    ExponentialPipe,
-    HighlightDirective,
     ContactComponent,
     ProductsComponent,
     DemoComponent,
-    HeaderComponent,
-    FooterComponent,
     PageNotFoundComponent,
     ProductDetailComponent,
     LayoutComponent
@@ -57,7 +53,9 @@ import { LayoutComponent } from './components/layout/layout.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    CoreModule,
     FormsModule,
+    SharedModule,
     SwiperModule
   ],
   providers: [],
