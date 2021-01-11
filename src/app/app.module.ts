@@ -8,11 +8,6 @@ import { SwiperModule } from 'swiper/angular';
 
 import { AppComponent } from './app.component';
 
-
-
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
