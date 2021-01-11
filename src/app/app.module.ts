@@ -11,14 +11,11 @@ import { AppComponent } from './app.component';
 
 
 
-import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { LayoutComponent } from './components/layout/layout.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    PageNotFoundComponent,
-    LayoutComponent
   ],
   imports: [
     BrowserModule,

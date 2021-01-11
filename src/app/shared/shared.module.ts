@@ -10,6 +10,9 @@ import { ProductComponent } from './components/product/product.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ProductsComponent } from './components/products/products.component';
+import { LayoutComponent } from './components/layout/layout.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+
 // Curso css grid
 import { CartComponent } from './components/cart/cart.component';
 import { CardComponent } from './components/card/card.component';
@@ -38,6 +41,8 @@ import { HighlightDirective } from './directives/highlight/highlight.directive';
     ProductsComponent,
     ExponentialPipe,
     HighlightDirective,
+    PageNotFoundComponent,
+    LayoutComponent,
     // Curso css grid
     CartComponent,
     CardComponent,
@@ -62,6 +67,8 @@ import { HighlightDirective } from './directives/highlight/highlight.directive';
     ProductsComponent,
     ExponentialPipe,
     HighlightDirective,
+    PageNotFoundComponent,
+    LayoutComponent,
     // Curso css grid
     CartComponent,
     CardComponent,

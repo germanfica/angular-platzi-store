@@ -4,9 +4,9 @@ import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { DemoComponent } from './shared/components/demo/demo.component';
 import { ProductsComponent } from './shared/components/products/products.component';
 import { ContactComponent } from './shared/components/contact/contact.component';
-import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
 import { ProductDetailComponent } from './shared/components/product-detail/product-detail.component';
-import { LayoutComponent } from './components/layout/layout.component';
+import { LayoutComponent } from './shared/components/layout/layout.component';
 
 const routes: Routes = [
   {
