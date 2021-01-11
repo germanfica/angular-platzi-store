@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DemoComponent } from './components/demo/demo.component';
-import { HomeComponent } from './components/home/home.component';
 import { ProductsComponent } from './components/products/products.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
@@ -21,8 +20,8 @@ const routes: Routes = [
         pathMatch: 'full',
       },
       {
-        path: 'home',
-        component: HomeComponent
+        path:'home',
+        loadChildren: () => import('./components/home/home.module').then(m => m.HomeModule)
       },
       {
         path: 'products',

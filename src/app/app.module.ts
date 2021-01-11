@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { ProductComponent } from './components/product/product.component';
 import { CartComponent } from './components/cart/cart.component';
 import { CardComponent } from './components/card/card.component';
-import { HomeComponent } from './components/home/home.component';
 import { StoreComponent } from './components/store/store.component';
 import { StoreV2Component } from './components/store-v2/store-v2.component';
 import { StoreV12Component } from './components/store-v12/store-v12.component';
@@ -24,12 +23,10 @@ import { ProductsComponent } from './components/products/products.component';
 import { DemoComponent } from './components/demo/demo.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { ContentComponent } from './components/content/content.component';
 import { SwiperModule } from 'swiper/angular';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { LayoutComponent } from './components/layout/layout.component';
-import { LeftComponent } from './components/left/left.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +34,6 @@ import { LeftComponent } from './components/left/left.component';
     ProductComponent,
     CartComponent,
     CardComponent,
-    HomeComponent,
     StoreComponent,
     StoreV2Component,
     StoreV12Component,
@@ -54,11 +50,9 @@ import { LeftComponent } from './components/left/left.component';
     DemoComponent,
     HeaderComponent,
     FooterComponent,
-    ContentComponent,
     PageNotFoundComponent,
     ProductDetailComponent,
-    LayoutComponent,
-    LeftComponent
+    LayoutComponent
   ],
   imports: [
     BrowserModule,
