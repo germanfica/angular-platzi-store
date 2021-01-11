@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Platzi } from '../../models/platzi';
+import { Platzi } from './../../models/platzi';
 
 @Component({
   selector: 'app-platzi',
