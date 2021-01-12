@@ -6,8 +6,6 @@ import { FormsModule } from '@angular/forms';
 // Curso de Angular
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { ProductComponent } from './components/product/product.component';
-import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
@@ -23,8 +21,6 @@ import { HighlightDirective } from './directives/highlight/highlight.directive';
   declarations: [
     HeaderComponent,
     FooterComponent,
-    ProductComponent,
-    ProductDetailComponent,
     ExponentialPipe,
     HighlightDirective,
     PageNotFoundComponent,
@@ -37,8 +33,6 @@ import { HighlightDirective } from './directives/highlight/highlight.directive';
   exports: [
     HeaderComponent,
     FooterComponent,
-    ProductComponent,
-    ProductDetailComponent,
     ExponentialPipe,
     HighlightDirective,
     PageNotFoundComponent,

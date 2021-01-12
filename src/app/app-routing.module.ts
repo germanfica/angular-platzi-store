@@ -3,7 +3,6 @@ import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
 import { DemoComponent } from './shared/components/demo/demo.component';
 import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
-import { ProductDetailComponent } from './shared/components/product-detail/product-detail.component';
 import { LayoutComponent } from './shared/components/layout/layout.component';
 
 const routes: Routes = [
@@ -21,13 +20,10 @@ const routes: Routes = [
         path:'home',
         loadChildren: () => import('./shared/components/home/home.module').then(m => m.HomeModule)
       },
+      // No me convence esta ruta para hacer SEO Optimization
       {
         path: 'products',
         loadChildren: () => import('./shared/components/products/products.module').then(m => m.ProductsModule)
-      },
-      {
-        path: 'products/:id',
-        component: ProductDetailComponent
       },
       {
         path: 'contact',

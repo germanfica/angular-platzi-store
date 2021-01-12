@@ -1,8 +1,5 @@
-import { isNgTemplate } from '@angular/compiler';
 import { Injectable } from '@angular/core';
-import { element } from 'protractor';
-import { ProductComponent } from './../../../shared/components/product/product.component';
-import { Product } from '../../../shared/interfaces/product';
+import { Product } from '../../../shared/components/products/interfaces/product';
 
 @Injectable({
   providedIn: 'root'
