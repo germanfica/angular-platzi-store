@@ -33,6 +33,10 @@ const routes: Routes = [
         path: 'contact',
         loadChildren: () => import('./shared/components/contact/contact.module').then(m => m.ContactModule)
       },
+      {
+        path: 'css-grid-layout',
+        loadChildren: () => import('./shared/components/css-grid-layout/css-grid-layout.module').then(m => m.CssGridLayoutModule)
+      },
     ]
   },
   {

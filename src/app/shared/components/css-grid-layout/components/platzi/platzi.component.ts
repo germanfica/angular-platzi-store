@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Platzi } from '../../interfaces/platzi';
+import { Platzi } from '../../../../interfaces/platzi';
 
 @Component({
   selector: 'app-platzi',
@@ -7,10 +7,10 @@ import { Platzi } from '../../interfaces/platzi';
   styleUrls: ['./platzi.component.scss']
 })
 export class PlatziComponent implements OnInit {
-   platzi: Platzi = {
-     id: '1',
-     image: 'assets/images/platzi/react-js/badge.png'
-   };
+  platzi: Platzi = {
+    id: '1',
+    image: 'assets/images/platzi/react-js/badge.png'
+  };
 
   constructor() { }
 
