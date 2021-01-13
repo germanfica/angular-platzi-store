@@ -19,26 +19,26 @@ import { HighlightDirective } from './directives/highlight/highlight.directive';
 
 @NgModule({
   declarations: [
+    LayoutComponent,
     HeaderComponent,
     FooterComponent,
     ExponentialPipe,
     HighlightDirective,
     PageNotFoundComponent,
-    LayoutComponent,
-    // Curso css grid
     CartComponent,
+    // Curso css grid
     DemoComponent,
   ],
   // Esto es la clave para poder utilizar los shared components
   exports: [
+    LayoutComponent,
     HeaderComponent,
     FooterComponent,
     ExponentialPipe,
     HighlightDirective,
     PageNotFoundComponent,
-    LayoutComponent,
-    // Curso css grid
     CartComponent,
+    // Curso css grid
     DemoComponent,
   ],
   imports: [
