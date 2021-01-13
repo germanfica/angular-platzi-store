@@ -1,15 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { DemoComponent } from './demo.component';
 import { RouterModule, Routes } from '@angular/router';
-import { ContactComponent } from './contact.component';
-
-import { AdminGuard } from './../../../admin/admin.guard'
 
 const routes: Routes = [
   {
     path: '',
-    canActivate: [AdminGuard],
-    component: ContactComponent
+    component: DemoComponent
   }
 ];
 
@@ -23,4 +20,4 @@ const routes: Routes = [
     RouterModule
   ]
 })
-export class ContactRoutingModule { }
+export class DemoRoutingModule { }
