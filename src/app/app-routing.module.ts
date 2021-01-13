@@ -29,14 +29,14 @@ const routes: Routes = [
         loadChildren: () => import('./shared/components/contact/contact.module').then(m => m.ContactModule)
       },
       {
+        path: 'demo',
+        loadChildren: () => import('./shared/components/demo/demo.module').then(m => m.DemoModule)
+      },
+      {
         path: 'css-grid-layout',
         loadChildren: () => import('./shared/components/css-grid-layout/css-grid-layout.module').then(m => m.CssGridLayoutModule)
       },
     ]
-  },
-  {
-    path: 'demo',
-    loadChildren: () => import('./shared/components/demo/demo.module').then(m => m.DemoModule)
   },
   // {
   //   path: 'demo',
