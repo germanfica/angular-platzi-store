@@ -13,8 +13,10 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { CartComponent } from './components/cart/cart.component';
 import { DemoComponent } from './components/demo/demo.component';
 
+// Pipes
 import { ExponentialPipe } from './pipes/exponential/exponential.pipe';
 
+// Directives
 import { HighlightDirective } from './directives/highlight/highlight.directive';
 
 @NgModule({
