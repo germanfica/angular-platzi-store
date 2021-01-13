@@ -1,0 +1,32 @@
+:host {
+    input {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #dbdbe2;
+        border-radius: 5px;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+    }
+    textarea {
+        font-family: 'Lato', sans-serif;
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #dbdbe2;
+        border-radius: 5px;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+        resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+    }
+    button {
+        background: #98ca3f;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 5px;
+        border: none;
+        font-size: 16px;
+        border-bottom: 5px solid #6d932b;
+        display: inline-block;
+    }
+}

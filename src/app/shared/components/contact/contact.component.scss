@@ -13,10 +13,10 @@
 
     .hero-container {
         display: grid;
-        grid-template-columns: 70px 1fr 320px;
-        grid-template-areas: ". title form"
-                             ". description form"
-                             ". description form";
+        grid-template-columns: 1fr 320px;
+        grid-template-areas: "title form"
+                             "description form"
+                             "description form";
         grid-gap: 10px;
     }
 
@@ -38,42 +38,9 @@
     .description {
         grid-area: description;
     }
-
-    .form input {
-        width: 100%;
-        padding: 10px;
-        font-size: 16px;
-        border: 1px solid #dbdbe2;
-        border-radius: 5px;
-        box-sizing: border-box;
-        margin-bottom: 10px;
-    }
-
-    .form textarea {
-        font-family: 'Lato', sans-serif;
-        width: 100%;
-        padding: 10px;
-        font-size: 16px;
-        border: 1px solid #dbdbe2;
-        border-radius: 5px;
-        box-sizing: border-box;
-        margin-bottom: 10px;
-        resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-    }
-
     .form p {
         font-size: 20px;
         color: #3a3b3f;
         margin-bottom: 1em;
-    }
-    .form button {
-        background: #98ca3f;
-        color: white;
-        padding: 10px 15px;
-        border-radius: 5px;
-        border: none;
-        font-size: 16px;
-        border-bottom: 5px solid #6d932b;
-        display: inline-block;
     }
 }
