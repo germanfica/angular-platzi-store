@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms';
 
 // Curso de Angular
 import { HeaderComponent } from './../shared/components/layout/components/header/header.component';
@@ -10,7 +9,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 
 // Curso css grid
 import { CartComponent } from './components/cart/cart.component';
-import { DemoComponent } from './components/demo/demo.component';
+//import { DemoComponent } from './components/demo/demo.component';
 
 // Pipes
 import { ExponentialPipe } from './pipes/exponential/exponential.pipe';
@@ -27,8 +26,6 @@ import { HighlightDirective } from './directives/highlight/highlight.directive';
     HighlightDirective,
     PageNotFoundComponent,
     CartComponent,
-    // Curso css grid
-    DemoComponent,
   ],
   // Esto es la clave para poder utilizar los shared components
   exports: [
@@ -39,12 +36,9 @@ import { HighlightDirective } from './directives/highlight/highlight.directive';
     HighlightDirective,
     PageNotFoundComponent,
     CartComponent,
-    // Curso css grid
-    DemoComponent,
   ],
   imports: [
     RouterModule,
-    FormsModule,
   ]
 })
 export class SharedModule { }
