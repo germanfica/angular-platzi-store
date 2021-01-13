@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { CssGridLayoutRoutingModule } from './css-grid-layout-routing.module';
 
 import { InstagramComponent } from './components/instagram/instagram.component';
 import { PinterestComponent } from './components/pinterest/pinterest.component';
@@ -10,11 +11,6 @@ import { StoreV12Component } from './components/store-v12/store-v12.component';
 import { StoreV13Component } from './components/store-v13/store-v13.component';
 import { StoreV14Component } from './components/store-v14/store-v14.component';
 import { StoreV15Component } from './components/store-v15/store-v15.component';
-
-import { CssGridLayoutRoutingModule } from './css-grid-layout-routing.module';
-import { SharedModule } from './../../../shared/shared.module';
-import { CoreModule } from './../../../core/core.module';
-
 
 @NgModule({
   declarations: [
@@ -30,8 +26,6 @@ import { CoreModule } from './../../../core/core.module';
   ],
   imports: [
     CommonModule,
-    CoreModule,
-    SharedModule,
     CssGridLayoutRoutingModule
   ]
 })
