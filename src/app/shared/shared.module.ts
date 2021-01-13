@@ -4,8 +4,8 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
 // Curso de Angular
-import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
+import { HeaderComponent } from './../shared/components/layout/components/header/header.component';
+import { FooterComponent } from './../shared/components/layout/components/footer/footer.component';
 import { LayoutComponent } from './components/layout/components/layout/layout.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
