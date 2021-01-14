@@ -1,11 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { NgModule } from '@angular/core';
-import { CoreModule  } from './core/core.module';
+import { CoreModule  } from '@core/core.module';
+import { SharedModule } from '@shared/shared.module';
 
 import { AppComponent } from './app.component';
-import { LayoutComponent } from './shared/components/layout/layout.component';
-import { SharedModule } from './shared/shared.module';
+import { LayoutComponent } from '@shared/components/layout/layout.component';
 
 @NgModule({
   declarations: [
