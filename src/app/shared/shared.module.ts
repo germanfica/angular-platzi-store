@@ -4,7 +4,6 @@ import { RouterModule } from '@angular/router';
 // Curso de Angular
 import { HeaderComponent } from './../shared/components/header/header.component';
 import { FooterComponent } from './../shared/components/footer/footer.component';
-import { LayoutComponent } from './components/layout/layout.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 // Curso css grid
@@ -18,7 +17,6 @@ import { HighlightDirective } from './directives/highlight/highlight.directive';
 
 @NgModule({
   declarations: [
-    LayoutComponent,
     HeaderComponent,
     FooterComponent,
     ExponentialPipe,
@@ -28,7 +26,6 @@ import { HighlightDirective } from './directives/highlight/highlight.directive';
   ],
   // Esto es la clave para poder utilizar los shared components
   exports: [
-    LayoutComponent,
     HeaderComponent,
     FooterComponent,
     ExponentialPipe,
