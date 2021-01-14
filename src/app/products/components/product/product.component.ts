@@ -1,7 +1,7 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Product } from '../../../../../core/models/product';
+import { Product } from '@core/models/product';
 
-// Decorador
+// Decorator
 @Component({
     selector: 'app-product',
     templateUrl: './product.component.html',

@@ -1,11 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './components/home/home.component';
+
+import { ContactComponent } from './components/contact/contact.component';
+
+import { AdminGuard } from '@app/admin/admin.guard'
 
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent
+    canActivate: [AdminGuard],
+    component: ContactComponent
   }
 ];
 
@@ -18,4 +22,4 @@ const routes: Routes = [
     RouterModule
   ]
 })
-export class HomeRoutingModule { }
+export class ContactRoutingModule { }

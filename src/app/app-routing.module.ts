@@ -17,16 +17,16 @@ const routes: Routes = [
       },
       {
         path:'home',
-        loadChildren: () => import('./shared/components/home/home.module').then(m => m.HomeModule)
+        loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
       },
       // No me convence esta ruta para hacer SEO Optimization
       {
         path: 'products',
-        loadChildren: () => import('./shared/components/products/products.module').then(m => m.ProductsModule)
+        loadChildren: () => import('./products/products.module').then(m => m.ProductsModule)
       },
       {
         path: 'contact',
-        loadChildren: () => import('./shared/components/contact/contact.module').then(m => m.ContactModule)
+        loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule)
       },
       {
         path: 'demo',
