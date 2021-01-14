@@ -25,3 +25,25 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Shorten your relative paths 🛣️
+Consejo, para no escribir rutas relativas tan largas recomiendo acortarlas así:
+
+**tsconfig.json**
+```json
+...
+"compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@shared/*": ["src/app/shared/*"],
+      "@core/*": ["src/app/core/*"]
+    }
+}
+```
+Entonces el resultado final a la hora de importarlo sería:
+```typescript
+import { CoreModule } from '@core/core.module';
+```
+```typescript
+import { SharedModule } from '@shared/shared.module';
+```
