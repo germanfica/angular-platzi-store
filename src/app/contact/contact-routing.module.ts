@@ -3,12 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { ContactComponent } from './components/contact/contact.component';
 
-import { AdminGuard } from '@app/admin/admin.guard'
-
 const routes: Routes = [
   {
     path: '',
-    canActivate: [AdminGuard],
     component: ContactComponent
   }
 ];

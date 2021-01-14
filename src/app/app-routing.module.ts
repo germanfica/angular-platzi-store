@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
+import { AdminGuard } from '@app/admin/admin.guard';
 
 import { LayoutComponent } from './layout/layout.component';
 
@@ -21,18 +22,22 @@ const routes: Routes = [
       // No me convence esta ruta para hacer SEO Optimization
       {
         path: 'products',
+        canActivate: [AdminGuard],
         loadChildren: () => import('./products/products.module').then(m => m.ProductsModule)
       },
       {
         path: 'contact',
+        canActivate: [AdminGuard],
         loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule)
       },
       {
         path: 'demo',
+        canActivate: [AdminGuard],
         loadChildren: () => import('./demo/demo.module').then(m => m.DemoModule)
       },
       {
         path: 'css-grid-layout',
+        canActivate: [AdminGuard],
         loadChildren: () => import('./css-grid-layout/css-grid-layout.module').then(m => m.CssGridLayoutModule)
       },
     ]
