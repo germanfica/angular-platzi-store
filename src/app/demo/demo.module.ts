@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
 import { DemoComponent } from './demo.component';
+import { MaterialModule } from '@app/material/material.module';
 
 
 
@@ -14,6 +15,7 @@ import { DemoComponent } from './demo.component';
   ],
   imports: [
     SharedModule,
+    MaterialModule,
     DemoRoutingModule,
     RouterModule,
     FormsModule
