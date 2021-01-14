@@ -5,7 +5,7 @@ import { CoreModule  } from '@core/core.module';
 import { SharedModule } from '@shared/shared.module';
 
 import { AppComponent } from './app.component';
-import { LayoutComponent } from '@shared/components/layout/layout.component';
+import { LayoutComponent } from './layout/layout.component';
 
 @NgModule({
   declarations: [

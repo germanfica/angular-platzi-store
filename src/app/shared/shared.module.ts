@@ -4,7 +4,6 @@ import { RouterModule } from '@angular/router';
 // Curso de Angular
 import { HeaderComponent } from '@shared/components/header/header.component';
 import { FooterComponent } from '@shared/components/footer/footer.component';
-import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { CartComponent } from './components/cart/cart.component';
 
 // Pipes
@@ -20,16 +19,15 @@ import { CommonModule } from '@angular/common';
     FooterComponent,
     ExponentialPipe,
     HighlightDirective,
-    PageNotFoundComponent,
     CartComponent,
   ],
-  // Esto es la clave para poder utilizar los shared components
+  // Esto es la clave para poder utilizarlos en otros componentes
+  // solo se necesita importar SharedModule
   exports: [
     HeaderComponent,
     FooterComponent,
     ExponentialPipe,
     HighlightDirective,
-    PageNotFoundComponent,
     CartComponent,
     CommonModule
   ],
