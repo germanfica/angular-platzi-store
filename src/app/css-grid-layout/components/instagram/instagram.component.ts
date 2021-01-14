@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Instagram  } from '../../../../../core/models/instagram';
+import { Instagram } from '@core/models/instagram';
 
 @Component({
   selector: 'app-instagram',
