@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { DemoRoutingModule } from './demo-routing.module';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
@@ -12,7 +11,6 @@ import { SharedModule } from '../../shared.module';
     DemoComponent,
   ],
   imports: [
-    CommonModule,
     SharedModule,
     DemoRoutingModule,
     RouterModule,

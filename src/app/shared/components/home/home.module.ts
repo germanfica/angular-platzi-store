@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
+import { SharedModule } from '../../shared.module';
 import { HomeRoutingModule } from './home-routing.module';
 
 import { HomeComponent } from './components/home/home.component';
 import { LeftComponent } from './components/left/left.component';
 import { ContentComponent } from './components/content/content.component';
-import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -13,7 +13,7 @@ import { CommonModule } from '@angular/common';
     ContentComponent
   ],
   imports: [
-    CommonModule,
+    SharedModule,
     HomeRoutingModule
   ]
 })

@@ -5,8 +5,6 @@ import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './../shared/components/header/header.component';
 import { FooterComponent } from './../shared/components/footer/footer.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-
-// Curso css grid
 import { CartComponent } from './components/cart/cart.component';
 
 // Pipes
@@ -14,6 +12,7 @@ import { ExponentialPipe } from './pipes/exponential/exponential.pipe';
 
 // Directives
 import { HighlightDirective } from './directives/highlight/highlight.directive';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -32,6 +31,7 @@ import { HighlightDirective } from './directives/highlight/highlight.directive';
     HighlightDirective,
     PageNotFoundComponent,
     CartComponent,
+    CommonModule
   ],
   imports: [
     RouterModule,

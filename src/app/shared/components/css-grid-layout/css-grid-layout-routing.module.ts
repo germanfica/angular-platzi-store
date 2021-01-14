@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { RouterModule, Routes } from '@angular/router';
 import { CardComponent } from './components/card/card.component';
 import { InstagramComponent } from './components/instagram/instagram.component';
@@ -58,7 +58,6 @@ const routes: Routes = [
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule,
     RouterModule.forChild(routes),
   ],
   exports: [
