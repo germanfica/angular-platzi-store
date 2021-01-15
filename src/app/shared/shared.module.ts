@@ -13,9 +13,11 @@ import { ExponentialPipe } from './pipes/exponential/exponential.pipe';
 import { HighlightDirective } from './directives/highlight/highlight.directive';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from '@app/material/material.module';
+import { LegacyHeaderComponent } from './components/legacy-header/legacy-header.component';
 
 @NgModule({
   declarations: [
+    LegacyHeaderComponent,
     HeaderComponent,
     FooterComponent,
     ExponentialPipe,
@@ -25,6 +27,7 @@ import { MaterialModule } from '@app/material/material.module';
   // Esto es la clave para poder utilizarlos en otros componentes
   // solo se necesita importar SharedModule
   exports: [
+    LegacyHeaderComponent,
     HeaderComponent,
     FooterComponent,
     ExponentialPipe,
