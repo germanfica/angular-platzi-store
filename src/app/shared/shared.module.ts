@@ -14,6 +14,7 @@ import { HighlightDirective } from './directives/highlight/highlight.directive';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from '@app/material/material.module';
 import { LegacyHeaderComponent } from './components/legacy-header/legacy-header.component';
+import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { LegacyHeaderComponent } from './components/legacy-header/legacy-header.
   ],
   imports: [
     RouterModule,
-    MaterialModule
+    MaterialModule,
+    CommonModule
   ]
 })
 export class SharedModule { }
