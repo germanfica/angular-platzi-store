@@ -35,4 +35,17 @@
     [color]="rlaContact.isActive && 'accent'">Contact</a>
   <a mat-button routerLink="/demo" routerLinkActive #rlaDemo="routerLinkActive"
     [color]="rlaDemo.isActive && 'accent'">Demo</a>
+
+  <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+  <mat-menu #menu="matMenu">
+    <a mat-menu-item routerLink="/css-grid-layout/instagram">Instagram</a>
+    <a mat-menu-item routerLink="/css-grid-layout/pinterest">Pinterest</a>
+    <a mat-menu-item routerLink="/css-grid-layout/platzi">Platzi</a>
+    <a mat-menu-item routerLink="/css-grid-layout/store">Store</a>
+    <a mat-menu-item routerLink="/css-grid-layout/store-v2">Store v2</a>
+    <a mat-menu-item routerLink="/css-grid-layout/store-v12">Store v12</a>
+    <a mat-menu-item routerLink="/css-grid-layout/store-v13">Store v13</a>
+    <a mat-menu-item routerLink="/css-grid-layout/store-v14">Store v14</a>
+    <a mat-menu-item routerLink="/css-grid-layout/store-v15">Store v15</a>
+  </mat-menu>
 </mat-toolbar>
