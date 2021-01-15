@@ -12,6 +12,7 @@ import { ExponentialPipe } from './pipes/exponential/exponential.pipe';
 // Directives
 import { HighlightDirective } from './directives/highlight/highlight.directive';
 import { CommonModule } from '@angular/common';
+import { MaterialModule } from '@app/material/material.module';
 
 @NgModule({
   declarations: [
@@ -29,10 +30,11 @@ import { CommonModule } from '@angular/common';
     ExponentialPipe,
     HighlightDirective,
     CartComponent,
-    CommonModule
+    CommonModule,
   ],
   imports: [
     RouterModule,
+    MaterialModule
   ]
 })
 export class SharedModule { }
