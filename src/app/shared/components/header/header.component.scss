@@ -19,10 +19,7 @@
         //padding-right: 15px;
         justify-self: end;
     }
-    .toggle-menu {
-        grid-area: toggle-menu;
-    }
-
+    
     @media screen and (max-width: 768px) {
         .hero {
             height: 100px;

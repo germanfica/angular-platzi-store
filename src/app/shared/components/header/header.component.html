@@ -52,29 +52,26 @@
 
 
 
-<mat-drawer-container class="example-container" autosize [hasBackdrop]="true">
-
+<mat-drawer-container autosize [hasBackdrop]="true">
 
   <!-- Probando toggle toolbar responsive -->
-  <mat-toolbar class="hero">
+  <mat-toolbar>
 
-    <div class="hero-container">
-      <button mat-icon-button class="example-icon toggle-menu" (click)="drawer.toggle()">
+    <div>
+      <button mat-icon-button (click)="drawer.toggle()">
         <mat-icon>menu</mat-icon>
       </button>
 
-      <div class="title">
-        <span>My App</span>
-        <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-          <mat-icon>favorite</mat-icon>
-        </button>
-      </div>
+      <span>My App</span>
+      <button mat-icon-button>
+        <mat-icon>favorite</mat-icon>
+      </button>
     </div>
 
   </mat-toolbar>
 
   <!-- Barra izquierda -->
-  <mat-drawer #drawer class="example-sidenav" mode="side">
+  <mat-drawer #drawer mode="side">
 
     <mat-list role="list">
       <a mat-list-item routerLink="/home">Home</a>
@@ -82,8 +79,7 @@
       <a mat-list-item routerLink="/contact">Contact</a>
       <a mat-list-item routerLink="/demo">Demo</a>
     </mat-list>
-    
-  </mat-drawer>
 
+  </mat-drawer>
 
 </mat-drawer-container>
