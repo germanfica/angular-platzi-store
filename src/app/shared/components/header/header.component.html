@@ -1,32 +1,43 @@
-<mat-toolbar>
-  <span>My App</span>
-  <span class="example-spacer"></span>
-  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-    <mat-icon>favorite</mat-icon>
-  </button>
-  <a mat-button routerLink="/home" routerLinkActive #rlaHome="routerLinkActive"
-    [color]="rlaHome.isActive && 'accent'">Home</a>
-  <a mat-button routerLink="/products" routerLinkActive #rlaProducts="routerLinkActive"
-    [color]="rlaProducts.isActive && 'accent'">Products</a>
-  <a mat-button routerLink="/contact" routerLinkActive #rlaContact="routerLinkActive"
-    [color]="rlaContact.isActive && 'accent'">Contact</a>
-  <a mat-button routerLink="/demo" routerLinkActive #rlaDemo="routerLinkActive"
-    [color]="rlaDemo.isActive && 'accent'">Demo</a>
+<mat-toolbar class="hero">
+  <div class="hero-container">
 
-  <button mat-button [matMenuTriggerFor]="menu">Menu</button>
-  <mat-menu #menu="matMenu">
-    <a mat-menu-item routerLink="/css-grid-layout/instagram">Instagram</a>
-    <a mat-menu-item routerLink="/css-grid-layout/pinterest">Pinterest</a>
-    <a mat-menu-item routerLink="/css-grid-layout/platzi">Platzi</a>
-    <a mat-menu-item routerLink="/css-grid-layout/store">Store</a>
-    <a mat-menu-item routerLink="/css-grid-layout/store-v2">Store v2</a>
-    <a mat-menu-item routerLink="/css-grid-layout/store-v12">Store v12</a>
-    <a mat-menu-item routerLink="/css-grid-layout/store-v13">Store v13</a>
-    <a mat-menu-item routerLink="/css-grid-layout/store-v14">Store v14</a>
-    <a mat-menu-item routerLink="/css-grid-layout/store-v15">Store v15</a>
-  </mat-menu>
-  <a mat-icon-button>
-    <mat-icon>shopping_cart</mat-icon>
-    <span matBadge="4"></span>
-  </a>
+    <div class="title">
+      <span>My App</span>
+      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon>favorite</mat-icon>
+      </button>
+    </div>
+
+    <div class="menu-bar">
+      <a mat-button routerLink="/home" routerLinkActive #rlaHome="routerLinkActive"
+        [color]="rlaHome.isActive && 'accent'">Home</a>
+      <a mat-button routerLink="/products" routerLinkActive #rlaProducts="routerLinkActive"
+        [color]="rlaProducts.isActive && 'accent'">Products</a>
+      <a mat-button routerLink="/contact" routerLinkActive #rlaContact="routerLinkActive"
+        [color]="rlaContact.isActive && 'accent'">Contact</a>
+      <a mat-button routerLink="/demo" routerLinkActive #rlaDemo="routerLinkActive"
+        [color]="rlaDemo.isActive && 'accent'">Demo</a>
+
+      <button mat-button [matMenuTriggerFor]="menu">CSS Grid Layout</button>
+      <mat-menu #menu="matMenu">
+        <a mat-menu-item routerLink="/css-grid-layout/instagram">Instagram</a>
+        <a mat-menu-item routerLink="/css-grid-layout/pinterest">Pinterest</a>
+        <a mat-menu-item routerLink="/css-grid-layout/platzi">Platzi</a>
+        <a mat-menu-item routerLink="/css-grid-layout/store">Store</a>
+        <a mat-menu-item routerLink="/css-grid-layout/store-v2">Store v2</a>
+        <a mat-menu-item routerLink="/css-grid-layout/store-v12">Store v12</a>
+        <a mat-menu-item routerLink="/css-grid-layout/store-v13">Store v13</a>
+        <a mat-menu-item routerLink="/css-grid-layout/store-v14">Store v14</a>
+        <a mat-menu-item routerLink="/css-grid-layout/store-v15">Store v15</a>
+      </mat-menu>
+    </div>
+
+    <div class="shopping-cart">
+      <a mat-icon-button>
+        <mat-icon>shopping_cart</mat-icon>
+        <span matBadge="4"></span>
+      </a>
+    </div>
+
+  </div>
 </mat-toolbar>

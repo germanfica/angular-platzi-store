@@ -1,0 +1,22 @@
+:host {
+    // https://css-tricks.com/snippets/css/complete-guide-grid/
+    .hero {
+        display: grid;
+    }
+    .hero-container {
+        display: grid;
+        grid-template-columns: 110px 1fr 1fr;
+        grid-template-areas: "title menu-bar shopping-cart";
+    }
+    .title {
+        grid-area: title;
+    }
+    .menu-bar{
+        grid-area: menu-bar;
+    }
+    .shopping-cart {
+        grid-area: shopping-cart;
+        //padding-right: 15px;
+        justify-self: end;
+    }
+}
