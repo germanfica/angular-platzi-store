@@ -23,24 +23,15 @@
         grid-area: toggle-menu;
     }
 
-    // DEMO EXAMPLE
-    .example-container {
-        margin: 0;
-        width: 100%;
-        height: 100%;
-        //border: 1px solid rgba(0, 0, 0, 0.5);
-    }
-      
-
-      
-    .example-sidenav {
-        padding: 20px;
-    }
-
     @media screen and (max-width: 768px) {
         .hero-container {
-          grid-template-columns: 45px 1fr;
-          grid-template-areas: "toggle-menu title";
+          grid-template-columns: 45px 1fr 1fr;
+          grid-template-rows: 1fr 1fr;
+          grid-template-areas: "title . shopping-cart"
+                               "menu-bar . .";
+        }
+        .mat-toolbar {
+            height: 100px;
         }
 
         .title {
