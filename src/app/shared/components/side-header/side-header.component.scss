@@ -1,10 +1,21 @@
 :host {
+    .hero {
+        display: grid;
+    }
     .side-header-container {
         position: absolute;
         top: 60px;
         bottom: 0;
         left: 0;
         right: 0;
+    }
+    a {
+        color: blueviolet;
+        display: block; 
+        text-decoration: none;
+        padding: 8px 20px 8px 26px;
+        margin: 0;
+        color: rgba(0,0,0,.8);
     }
 
     @media screen and (max-width: 768px) {

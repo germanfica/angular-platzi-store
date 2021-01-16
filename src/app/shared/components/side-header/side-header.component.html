@@ -17,7 +17,6 @@
 
     </mat-toolbar>
 
-    asdasdasd
     <router-outlet></router-outlet>
     <app-footer></app-footer>
 
@@ -25,15 +24,25 @@
     <button mat-icon-button (click)="drawer.toggle()">
         <mat-icon>menu</mat-icon>
     </button>
-
     <!-- Barra izquierda -->
-    <mat-drawer #drawer mode="side">
-
+    <mat-drawer class="hero" #drawer mode="side">
         <mat-list role="list">
-            <a mat-list-item routerLink="/home">Home</a>
-            <a mat-list-item routerLink="/products">Products</a>
-            <a mat-list-item routerLink="/contact">Contact</a>
-            <a mat-list-item routerLink="/demo">Demo</a>
+            <a mat-list-item routerLink="/home">
+                <mat-icon>home_outline</mat-icon>
+                <span>Home</span>
+            </a>
+            <a mat-list-item routerLink="/products">
+                <mat-icon>local_mall</mat-icon>
+                <span>Products</span>
+            </a>
+            <a mat-list-item routerLink="/contact">
+                <mat-icon>contact_page</mat-icon>
+                <span>Contact</span>
+            </a>
+            <a mat-list-item routerLink="/demo">
+                <mat-icon>code</mat-icon>
+                <span>Demo</span>
+            </a>
         </mat-list>
 
     </mat-drawer>
