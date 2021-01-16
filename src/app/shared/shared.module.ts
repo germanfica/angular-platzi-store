@@ -15,6 +15,7 @@ import { CommonModule } from '@angular/common';
 import { MaterialModule } from '@app/material/material.module';
 import { LegacyHeaderComponent } from './components/legacy-header/legacy-header.component';
 import { SideHeaderComponent } from './components/side-header/side-header.component';
+import { NavigationItemsComponent } from './components/navigation-items/navigation-items.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { SideHeaderComponent } from './components/side-header/side-header.compon
     ExponentialPipe,
     HighlightDirective,
     CartComponent,
+    NavigationItemsComponent,
   ],
   // Esto es la clave para poder utilizarlos en otros componentes
   // solo se necesita importar SharedModule
