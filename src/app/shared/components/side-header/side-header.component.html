@@ -1,6 +1,9 @@
-<p>side-header works!</p>
-
 <mat-drawer-container class="side-header-container" autosize [hasBackdrop]="true">
+
+    <!-- Ocultas esto cuando está en mobile -->
+    <app-header [sideHeaderDrawer]="drawer"></app-header>
+
+    <!-- Mostrar esto cuando esté en mobile -->
     <!-- Probando toggle toolbar responsive -->
     <mat-toolbar>
 
@@ -17,13 +20,6 @@
 
     </mat-toolbar>
 
-    <router-outlet></router-outlet>
-    <app-footer></app-footer>
-
-
-    <button mat-icon-button (click)="drawer.toggle()">
-        <mat-icon>menu</mat-icon>
-    </button>
     <!-- Barra izquierda -->
     <mat-drawer class="hero" #drawer mode="side">
         <mat-list role="list">
