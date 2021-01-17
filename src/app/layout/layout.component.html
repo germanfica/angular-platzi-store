@@ -8,15 +8,15 @@
 <app-footer></app-footer> -->
 
 <mat-drawer-container class="mat-drawer-container" autosize [hasBackdrop]="true">
-
+    <!-- Header -->
     <app-header [sideHeaderDrawer]="drawer"></app-header>
 
     <!-- Contenido + Footer -->
     <router-outlet></router-outlet>
     <app-footer></app-footer>
 
-    <!-- Barra izquierda -->
     <mat-drawer #drawer mode="side">
+        <!-- Barra de navegación izquierda (navside) -->
         <app-side-header></app-side-header>
     </mat-drawer>
 
