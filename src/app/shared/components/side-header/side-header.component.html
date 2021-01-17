@@ -1,7 +1,9 @@
 <mat-drawer-container class="side-header-container" autosize [hasBackdrop]="true">
-
-    <!-- Ocultas esto cuando está en mobile -->
     <app-header [sideHeaderDrawer]="drawer"></app-header>
+
+    <!-- Contenido + Footer -->
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
 
     <!-- Barra izquierda -->
     <mat-drawer class="hero" #drawer mode="side">
