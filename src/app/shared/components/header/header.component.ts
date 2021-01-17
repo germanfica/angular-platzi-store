@@ -12,9 +12,9 @@ export class HeaderComponent implements OnInit {
   isDesktop: boolean = true;
   innerWidth: number = 0; // Ancho de la ventana
 
-  // https://stackoverflow.com/questions/45350716/detecting-real-time-window-size-changes-in-angular-4
   /**
    * Este método me avisa si hubo un cambio en el tamaño de la ventana del navegador.
+   * Fuente: https://stackoverflow.com/questions/45350716/detecting-real-time-window-size-changes-in-angular-4
    */
   @HostListener('window:resize')
   onResize() {
