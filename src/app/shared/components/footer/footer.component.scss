@@ -1,13 +1,14 @@
 :host {
-    background-color: #3f51b5;
-    background: #3f51b5;
-    color: #3f51b5;
     margin: 0;
     .hero {
-        //display: grid;
-        height: 80px;
+        display: grid;
+        height: 100px; // Momentaneo
+        background-color: #3f51b5;
+        background: #3f51b5;
+        color: #fff;
+        margin: 0;
     }
     .hero-container {
-
+        display: grid;
     }
 }
