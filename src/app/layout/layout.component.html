@@ -7,4 +7,17 @@
 <!-- <router-outlet></router-outlet>
 <app-footer></app-footer> -->
 
-<app-side-header></app-side-header>
+<mat-drawer-container class="mat-drawer-container" autosize [hasBackdrop]="true">
+
+    <app-header [sideHeaderDrawer]="drawer"></app-header>
+
+    <!-- Contenido + Footer -->
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
+
+    <!-- Barra izquierda -->
+    <mat-drawer #drawer mode="side">
+        <app-side-header></app-side-header>
+    </mat-drawer>
+
+</mat-drawer-container>

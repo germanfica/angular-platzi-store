@@ -1,15 +1,4 @@
 :host {
-    .hero {
-        display: grid;
-        padding-right: 20px;
-    }
-    .side-header-container {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-    }
     a {
         color: blueviolet;
         display: block; 
@@ -20,18 +9,7 @@
         margin: 0;
         color: rgba(0,0,0,.8);
     }
-
     mat-icon {
         padding-right: 10px;
-    }
-
-    @media screen and (max-width: 768px) {
-        .side-header-container {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-        }
     }
 }
