@@ -10,5 +10,17 @@
     }
     .hero-container {
         display: grid;
+        grid-template-rows: 1fr;
+        grid-template-areas: "credits";
+    }
+    .credits {
+        grid-area: credits;
+        justify-self: center;
+        align-self: center;
+    }
+    a {
+        color: #fff;
+        //display: block; 
+        text-decoration: none;
     }
 }
