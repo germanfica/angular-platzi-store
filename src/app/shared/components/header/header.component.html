@@ -1,6 +1,10 @@
 <mat-toolbar class="hero">
   <div class="hero-container">
 
+    <button *ngIf="!isDesktop" mat-icon-button (click)="sideHeaderDrawer.toggle()" class="button-menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+
     <div class="title">
       <span>My App</span>
       <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
@@ -8,7 +12,7 @@
       </button>
     </div>
 
-    <div class="menu-bar">
+    <div *ngIf="isDesktop" class="menu-bar">
       <a mat-button routerLink="/home" routerLinkActive #rlaHome="routerLinkActive"
         [color]="rlaHome.isActive && 'accent'">Home</a>
       <a mat-button routerLink="/products" routerLinkActive #rlaProducts="routerLinkActive"
@@ -42,5 +46,3 @@
   </div>
 </mat-toolbar>
 <!-- FUNCIONOOOO!! VAMOOOS!!! -->
-
-<button *ngIf="isMobile" (click)="sideHeaderDrawer.toggle()">Open</button>

@@ -25,20 +25,19 @@
         //padding-right: 15px;
         justify-self: end;
     }
+    .button-menu{
+        grid-area: button-menu;
+    }
     
     @media screen and (max-width: 768px) {
-        .hero {
-            height: 100px;
-        }
         .hero-container {
-          grid-template-columns: 45px 1fr 1fr;
-          grid-template-rows: 1fr 1fr;
-          grid-template-areas: "title . shopping-cart"
-                               "menu-bar . .";
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-template-areas: "button-menu title shopping-cart";
         }
         .title {
             grid-area: title;
-            justify-self: self-start;
+            //justify-self: self-start;
+            justify-self: center;
         }
     }
 }

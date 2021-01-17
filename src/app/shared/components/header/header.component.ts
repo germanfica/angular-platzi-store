@@ -9,7 +9,7 @@ import { MatDrawer } from '@angular/material/sidenav';
 export class HeaderComponent implements OnInit {
   // @Input() sideHeaderDrawer: any;
   @Input() sideHeaderDrawer: MatDrawer = {} as MatDrawer;
-  isMobile: boolean = false;
+  isDesktop: boolean = true;
   innerWidth: number = 0;
 
   // https://stackoverflow.com/questions/45350716/detecting-real-time-window-size-changes-in-angular-4
@@ -20,10 +20,10 @@ export class HeaderComponent implements OnInit {
   }
 
   _updateIsMobile() {
-    if (innerWidth <= 768) { // 768px portrait
-      this.isMobile = true;
+    if (innerWidth > 768) { // 768px portrait
+      this.isDesktop = true;
     } else {
-      this.isMobile = false;
+      this.isDesktop = false;
     }
   }
 
