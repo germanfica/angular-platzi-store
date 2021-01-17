@@ -3,23 +3,6 @@
     <!-- Ocultas esto cuando está en mobile -->
     <app-header [sideHeaderDrawer]="drawer"></app-header>
 
-    <!-- Mostrar esto cuando esté en mobile -->
-    <!-- Probando toggle toolbar responsive -->
-    <mat-toolbar>
-
-        <div>
-            <button mat-icon-button (click)="drawer.toggle()">
-                <mat-icon>menu</mat-icon>
-            </button>
-
-            <span>My App</span>
-            <button mat-icon-button>
-                <mat-icon>favorite</mat-icon>
-            </button>
-        </div>
-
-    </mat-toolbar>
-
     <!-- Barra izquierda -->
     <mat-drawer class="hero" #drawer mode="side">
         <mat-list role="list">
