@@ -1,3 +1,4 @@
+<!--
 <h3 class="card-header h5" appHighlight>{{ product.title | uppercase }} <span> {{ product.description | slice:0:10 }} </span></h3>
 <img [src]="product.image" alt="">
 <div class="card-footer card-bottom">
@@ -6,3 +7,47 @@
     <p><button [routerLink]="['/products', product.id]" class="btn btn-primary-gradien-description">Ver detalle</button></p>
     <p>{{ today | date:'medium' }}</p>
 </div>
+-->
+
+<!-- <mat-card class="example-card">
+    <mat-card-header class="card-header h5">
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title >{{ product.title | uppercase }}</mat-card-title>
+      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="product.image" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <span>{{ product.description | slice:0:10 }}</span>
+    </mat-card-content>
+    <mat-card-actions>
+        
+        <button (click)="addCart()" class="btn btn-primary-gradien">Agregar al carrito</button>
+        <button [routerLink]="['/products', product.id]" class="btn btn-primary-gradien-description">Ver detalle</button>
+    </mat-card-actions>
+</mat-card> -->
+
+<mat-card class="example-card">
+    <mat-card-header class="card-header h5">
+      <mat-card-title>
+        {{ product.title | uppercase }}
+      </mat-card-title>
+      <mat-card-subtitle>
+        {{ product.price | currency:'ARS':true }}
+      </mat-card-subtitle>
+    </mat-card-header>
+    <div class="crop-image">
+        <img mat-card-image [src]="product.image" [alt]="product.description">
+    </div>
+    
+    <mat-card-content>
+      <span>{{ product.description | slice:0:10 }}...</span>
+      <mat-card-actions>
+        <button [routerLink]="['/products', product.id]" class="btn btn-primary-gradien-description">Ver detalle</button>
+        <button (click)="addCart()" class="btn btn-primary-gradien">
+            <mat-icon>shopping_cart</mat-icon>
+            <span>Agregar al carrito</span>
+        </button>
+        
+      </mat-card-actions>
+    </mat-card-content>
+</mat-card>
