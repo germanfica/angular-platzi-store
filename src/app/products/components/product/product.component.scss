@@ -13,7 +13,7 @@
 
   .card-header {
     background-color: $secondary-color;
-    padding: $card-padding;
+    padding: 20px;
     border-bottom: $card-border-color;
     border-top-left-radius: $card-border-radious;
     border-top-right-radius: $card-border-radious;
@@ -93,6 +93,12 @@
 
   .btn{
     padding: $btn-padding;
+  }
+
+  @media screen and (max-width: 768px) {
+    .crop-image {
+      height: 300px;
+    }
   }
 }
 
