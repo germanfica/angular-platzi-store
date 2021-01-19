@@ -1,45 +1,24 @@
-@import 'src/app/app.component';
+@import 'src/styles/variables';
 
 :host {
     padding: 0px;
     .hero {
         // font-size: 50px;
         display: grid;
+        padding: 0.375rem 0.575rem;
     }
-
     .hero-content {
         display: grid;
         grid-template-columns: 24px 1fr;
         grid-template-areas: "icon text";
+        gap: 6px;
     }
     .icon {
         grid-area: icon;
+        align-self: center;
     }
     .text{
         grid-area: text;
         align-self: center;
-        text-align: center;
-        vertical-align: center;
-        align-content: center;
-        
-    }
-    .btn{
-        padding: $btn-padding;
-    }
-    @mixin btn-gradien($deg,$leftcolor,$leftcolor-per,$rightcolor,$rightcolor-per,$font-color){
-        background-image: linear-gradient(to right,$leftcolor 0%,$rightcolor 51%,$leftcolor 100%);
-        border:none;
-        color:$font-color;
-        background-size: auto 200%;
-        transition: all 0.3s ease;
-    }
-    .btn-primary-gradien{
-        @include btn-gradien(60,lighten($primary-color,8%),0%,darken($primary-color,8%),100%,$white);
-        color: $white;
-        &:focus,&:active,&.active{
-            transition: 1.5s;
-            background-position: right center;
-            background-image: linear-gradient(to right, lighten($primary-color,8%),0%,darken($primary-color,8%),100%,$white) !important;
-        }
     }
 }
