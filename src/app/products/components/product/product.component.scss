@@ -1,50 +1,6 @@
-// @import './../../../../../app.component';
-@import 'src/app/app.component';
- 
 :host {
-  display: block;
-  margin: 4px;
-  margin-bottom: $card-margin-bottom;
-  border: none;
-  transition: all 0.3s ease;
-  letter-spacing: 0.5px;
-  border-radius: $card-border-radious;
-  box-shadow: $card-box-shadow;
-
-  .card-header {
-    background-color: $secondary-color;
-    padding: 20px;
-    border-bottom: $card-border-color;
-    border-top-left-radius: $card-border-radious;
-    border-top-right-radius: $card-border-radious;
-    position: relative;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: $light-gray;
-  }
-
-  .card-header span {
-    font-size: $card-header-span-size;
-    color: $card-header-span-color;
-    margin-top: 5px;
-    display: block;
-    letter-spacing: 1px;
-  }
-
-  .card-footer {
-    background-color: $card-footer-bg-color;
-    border-top: $card-border-color;
-    padding: $card-padding;
-    border-bottom-left-radius: $card-border-radious;
-    border-bottom-right-radius: $card-border-radious;
-  }
-
-  .card-bottom {
-    border: 1px solid $secondary-color;
-  }
-
   img {
     max-width: 100%;
-    // height: 250px;
   }
 
   .crop-image {
@@ -62,8 +18,6 @@
     transform: translate(-50%, -50%);
     max-width: 100%;
   }
-
-  
 
   @media screen and (max-width: 768px) {
     .crop-image {
