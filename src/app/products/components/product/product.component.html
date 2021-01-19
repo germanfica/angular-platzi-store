@@ -27,7 +27,7 @@
 </mat-card> -->
 
 <mat-card class="example-card">
-    <mat-card-header class="card-header h5">
+    <mat-card-header class="card-header">
       <mat-card-title>
         {{ product.title | uppercase }}
       </mat-card-title>
@@ -41,13 +41,10 @@
     
     <mat-card-content>
       <span>{{ product.description | slice:0:10 }}...</span>
+      <!-- Contenedor de acciones -->
       <mat-card-actions>
-        <button [routerLink]="['/products', product.id]" class="btn btn-primary-gradien-description">Ver detalle</button>
-        <button (click)="addCart()" class="btn btn-primary-gradien">
-            <mat-icon>shopping_cart</mat-icon>
-            <span>Agregar al carrito</span>
-        </button>
-        
+        <app-detail-button [routerLink]="['/products', product.id]"></app-detail-button>
+        <app-shopping-cart-button (click)="addCart()"></app-shopping-cart-button>
       </mat-card-actions>
     </mat-card-content>
 </mat-card>

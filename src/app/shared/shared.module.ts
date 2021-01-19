@@ -16,6 +16,8 @@ import { MaterialModule } from '@app/material/material.module';
 import { LegacyHeaderComponent } from './components/legacy-header/legacy-header.component';
 import { SideHeaderComponent } from './components/side-header/side-header.component';
 import { NavigationItemsComponent } from './components/navigation-items/navigation-items.component';
+import { ShoppingCartButtonComponent } from './components/buttons/shopping-cart-button/shopping-cart-button.component';
+import { DetailButtonComponent } from './components/buttons/detail-button/detail-button.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { NavigationItemsComponent } from './components/navigation-items/navigati
     HighlightDirective,
     CartComponent,
     NavigationItemsComponent,
+    ShoppingCartButtonComponent,
+    DetailButtonComponent,
   ],
   // Esto es la clave para poder utilizarlos en otros componentes
   // solo se necesita importar SharedModule
@@ -39,6 +43,8 @@ import { NavigationItemsComponent } from './components/navigation-items/navigati
     HighlightDirective,
     CartComponent,
     CommonModule,
+    ShoppingCartButtonComponent,
+    DetailButtonComponent
   ],
   imports: [
     RouterModule,
