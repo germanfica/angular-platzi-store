@@ -11,10 +11,11 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { AdminTableComponent } from './components/admin-table/admin-table.component';
 
 
 @NgModule({
-  declarations: [ProductFormComponent, NavComponent, DashboardComponent],
+  declarations: [ProductFormComponent, NavComponent, DashboardComponent, AdminTableComponent],
   imports: [
     CommonModule,
     MaterialModule,
