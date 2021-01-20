@@ -46,6 +46,8 @@ export class AdminTableDataSource extends DataSource<AdminTableItem> {
 
   constructor() {
     super();
+    this.paginator = {} as MatPaginator;
+    this.sort = {} as MatSort;
   }
 
   /**

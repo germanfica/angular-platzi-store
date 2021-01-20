@@ -18,6 +18,13 @@ export class AdminTableComponent implements AfterViewInit, OnInit {
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
   displayedColumns = ['id', 'name'];
 
+  constructor() {
+    this.paginator = {} as MatPaginator;
+    this.sort = {} as MatSort;
+    this.table = {} as MatTable<AdminTableItem>;
+    this.dataSource = {} as AdminTableDataSource;
+  }
+
   ngOnInit() {
     this.dataSource = new AdminTableDataSource();
   }
