@@ -8,9 +8,6 @@ import { MaterialModule } from '@app/material/material.module';
 import { NavComponent } from './components/nav/nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { MatTableModule } from '@angular/material/table';
-import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatSortModule } from '@angular/material/sort';
 import { AdminTableComponent } from './components/admin-table/admin-table.component';
 
 
@@ -21,10 +18,7 @@ import { AdminTableComponent } from './components/admin-table/admin-table.compon
     MaterialModule,
     AdminRoutingModule,
     ReactiveFormsModule,
-    LayoutModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatSortModule
+    LayoutModule
   ]
 })
 export class AdminModule { }
