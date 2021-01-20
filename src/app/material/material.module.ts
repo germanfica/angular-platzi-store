@@ -11,6 +11,12 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatTreeModule } from '@angular/material/tree';
+import { MatSelectModule } from '@angular/material/select';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [],
@@ -26,7 +32,12 @@ import { MatTreeModule } from '@angular/material/tree';
     MatSidenavModule,
     MatListModule,
     MatTreeModule,
-    
+    MatSelectModule,
+    MatRadioModule,
+    MatGridListModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
   ],
   exports: [
     MatButtonModule,
@@ -38,7 +49,13 @@ import { MatTreeModule } from '@angular/material/tree';
     MatBadgeModule,
     MatSidenavModule,
     MatListModule,
-    MatTreeModule
+    MatTreeModule,
+    MatSelectModule,
+    MatRadioModule,
+    MatGridListModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ]
 })
 export class MaterialModule { }
