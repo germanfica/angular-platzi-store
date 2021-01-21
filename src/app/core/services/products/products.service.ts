@@ -2,10 +2,13 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Product } from '@core/models/product';
 
+const _PRODUCTS_URL: String = 'http://platzi-store.herokuapp.com/products';
+
 @Injectable({
   providedIn: 'root'
 })
 export class ProductsService {
+  
   products: Product[] = [
     {
       id: '1',
@@ -55,6 +58,7 @@ export class ProductsService {
 
   getAllProducts(): Product[] {
     // JSON.parse('')
+    console.log(_PRODUCTS_URL);
     return this.products;
   }
 
