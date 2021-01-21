@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Product } from '@core/models/product';
 
@@ -50,7 +51,7 @@ export class ProductsService {
     }
   ];
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   getAllProducts(): Product[] {
     // JSON.parse('')
