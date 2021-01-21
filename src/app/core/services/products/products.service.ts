@@ -53,6 +53,7 @@ export class ProductsService {
   constructor() { }
 
   getAllProducts(): Product[] {
+    // JSON.parse('')
     return this.products;
   }
 
