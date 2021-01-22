@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ProductsService {
-  productsUrl: string = 'http://platzi-store.herokuapp.com/products/';
+  productsUrl: string = 'https://platzi-store.herokuapp.com/products/';
 
   constructor(private http: HttpClient) { }
 
