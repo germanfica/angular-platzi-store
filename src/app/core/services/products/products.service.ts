@@ -2,20 +2,19 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Product } from '@core/models/product';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductsService {
-  productsUrl: string = 'https://platzi-store.herokuapp.com/products/';
-
   constructor(private http: HttpClient) { }
 
   /**
    * Devuelve todos los productos del API
    */
   getAllProducts(): Observable<Product[]> {
-    return this.http.get<Product[]>(this.productsUrl);
+    return this.http.get<Product[]>(environment.products_api);
   }
 
   /**
@@ -23,6 +22,6 @@ export class ProductsService {
    * @param id
    */
   getProduct(id: string): Observable<Product> {
-    return this.http.get<Product>(this.productsUrl+id);
+    return this.http.get<Product>(environment.products_api+id);
   }
 }
