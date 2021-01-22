@@ -17,14 +17,17 @@ export class ProductsComponent implements OnInit {
     ) {}
 
   ngOnInit(): void {
-    this.route.params.subscribe((params: Params) => {
-      // Trae todos los productos
-      this.products = this.productsService.getAllProducts();
-    });
+    this.fetchProducts();
   }
 
   clickProduct(id: number): void {
     console.log('product');
     console.log(id);
+  }
+
+  fetchProducts() {
+    this.productsService.getAllProducts().subscribe((products: Product[]) => {
+      this.products = products
+    });
   }
 }
