@@ -11,15 +11,15 @@ export class ProductsService {
   constructor(private http: HttpClient) { }
 
   /**
-   * Devuelve todos los productos del API
+   * Devuelve todos los productos.
    */
   getAllProducts(): Observable<Product[]> {
     return this.http.get<Product[]>(environment.products_api);
   }
 
   /**
-   * Devuelve el id del producto del API
-   * @param id
+   * Devuelve un producto dado un id.
+   * @param id del producto a obtener.
    */
   getProduct(id: string): Observable<Product> {
     return this.http.get<Product>(environment.products_api+id);
