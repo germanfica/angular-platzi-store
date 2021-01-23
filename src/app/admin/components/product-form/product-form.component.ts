@@ -110,4 +110,23 @@ export class ProductFormComponent {
       console.log(p);
     });
   }
+
+  /**
+   * Actualiza un producto existente.
+   */
+  updateProduct() {
+    // const id: string = '731';
+    const id: string = '1';
+    const product: Partial<Product> = {
+      price: 300,
+    } as Partial<Product>;
+
+    console.log("Partial product: ");
+    console.log(product);
+
+    this.ps.updateProduct(id, product).subscribe((p) => {
+      console.log("Producto! Actualizado con éxito.");
+      console.log(p);
+    });
+  }
 }
