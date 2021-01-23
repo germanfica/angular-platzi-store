@@ -40,4 +40,12 @@ export class ProductsService {
   updateProduct(id: string, changes: Partial<Product>): Observable<Product> {
     return this.http.put<Product>(environment.products_api + id, changes);
   }
+
+  /**
+   * Elimina un producto dado un id.
+   * @param id Identificador del producto a eliminar.
+   */
+  deleteProduct(id: string): Observable<Product> {
+    return this.http.delete<Product>(environment.products_api + id);
+  }
 }

@@ -116,7 +116,7 @@ export class ProductFormComponent {
    */
   updateProduct() {
     // const id: string = '731';
-    const id: string = '1';
+    const id: string = '731';
     const product: Partial<Product> = {
       price: 300,
     } as Partial<Product>;
@@ -126,6 +126,18 @@ export class ProductFormComponent {
 
     this.ps.updateProduct(id, product).subscribe((p) => {
       console.log("Producto! Actualizado con éxito.");
+      console.log(p);
+    });
+  }
+
+  /**
+   * Elimina un producto.
+   */
+  deleteProduct() {
+    const id: string = '731';
+    
+    this.ps.deleteProduct(id).subscribe((p) => {
+      console.log("Producto eliminado con éxito.");
       console.log(p);
     });
   }
