@@ -19,7 +19,7 @@ export class ProductsService {
 
   /**
    * Devuelve un producto dado un id.
-   * @param id del producto a obtener.
+   * @param id identificador del producto a obtener.
    */
   getProduct(id: string): Observable<Product> {
     return this.http.get<Product>(environment.products_api+id);
@@ -27,7 +27,7 @@ export class ProductsService {
 
   /**
    * Crea un nuevo producto.
-   * @param product 
+   * @param product producto a agregar.
    */
   createProduct(product: Product): Observable<Product> {
     return this.http.post<Product>(environment.products_api, product);
