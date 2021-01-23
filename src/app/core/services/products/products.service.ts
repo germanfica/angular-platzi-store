@@ -19,17 +19,25 @@ export class ProductsService {
 
   /**
    * Devuelve un producto dado un id.
-   * @param id identificador del producto a obtener.
+   * @param id Identificador del producto a obtener.
    */
   getProduct(id: string): Observable<Product> {
-    return this.http.get<Product>(environment.products_api+id);
+    return this.http.get<Product>(environment.products_api + id);
   }
 
   /**
    * Crea un nuevo producto.
-   * @param product producto a agregar.
+   * @param product Producto a agregar.
    */
   createProduct(product: Product): Observable<Product> {
     return this.http.post<Product>(environment.products_api, product);
+  }
+
+  /**
+   * Actualiza un producto dado un id.
+   * @param product Nuevos valores para actualizar.
+   */
+  updateProduct(id: string, changes: Partial<Product>): Observable<Product> {
+    return this.http.put<Product>(environment.products_api + id, changes);
   }
 }
