@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Product } from '@core/models/product';
+import { ProductsService } from '@core/services/products/products.service';
 
 @Component({
   selector: 'app-product-form',
@@ -85,9 +87,27 @@ export class ProductFormComponent {
     {name: 'Wyoming', abbreviation: 'WY'}
   ];
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private ps: ProductsService) {}
 
   onSubmit() {
     alert('Thanks!');
+  }
+
+  /**
+   * Crea un nuevo producto.
+   */
+  createProduct() {
+    const product: Product = {
+      id: '731',
+      image: 'assets/images/camiseta.png',
+      title: 'Camiseta Nimbus 2021',
+      price: 510000,
+      description: 'Exitosa remera de carreras. Diseño revolucionario.'
+    } as Product;
+
+    this.ps.createProduct(product).subscribe((p) => {
+      console.log("Producto!! Creado");
+      console.log(p);
+    });
   }
 }
