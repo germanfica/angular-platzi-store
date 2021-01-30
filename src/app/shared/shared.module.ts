@@ -19,6 +19,8 @@ import { NavigationItemsComponent } from './components/navigation-items/navigati
 import { ShoppingCartButtonComponent } from './components/buttons/shopping-cart-button/shopping-cart-button.component';
 import { DetailButtonComponent } from './components/buttons/detail-button/detail-button.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+
 
 @NgModule({
   declarations: [
@@ -46,13 +48,15 @@ import { ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     ShoppingCartButtonComponent,
     DetailButtonComponent,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatFormFieldModule
   ],
   imports: [
     RouterModule,
     MaterialModule,
     CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatFormFieldModule
   ]
 })
 export class SharedModule { }
