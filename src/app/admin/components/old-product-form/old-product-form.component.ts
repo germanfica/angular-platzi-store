@@ -5,10 +5,10 @@ import { ProductsService } from '@core/services/products/products.service';
 
 @Component({
   selector: 'app-product-form',
-  templateUrl: './product-form.component.html',
-  styleUrls: ['./product-form.component.scss']
+  templateUrl: './old-product-form.component.html',
+  styleUrls: ['./old-product-form.component.scss']
 })
-export class ProductFormComponent {
+export class OldProductFormComponent {
   addressForm = this.fb.group({
     company: null,
     firstName: [null, Validators.required],
