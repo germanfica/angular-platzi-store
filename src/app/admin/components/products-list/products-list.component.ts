@@ -1,8 +1,7 @@
-import { Component, DebugElement, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Product } from '@core/models/product';
 
-import { ProductsService }from '@core/services/products/products.service';
-import { Console } from 'console';
+import { ProductsService } from '@core/services/products/products.service';
 
 @Component({
   selector: 'app-products-list',
@@ -21,7 +20,7 @@ export class ProductsListComponent implements OnInit {
   }
 
   /**
-   * Trae los productos
+   * Trae los productos del servidor.
    */
   fetchProducts() {
     this.productsService.getAllProducts().subscribe((products) => {
@@ -30,12 +29,30 @@ export class ProductsListComponent implements OnInit {
     });
   }
 
-  deleteProduct(id:string) {
+  /**
+   * Genera una nueva `lista de productos` pero sin el producto
+   * que se quiere ignorar. Esto sigue siendo ineficiente. Lo ideal sería mantener
+   * una lista de productos con una cierta cantidad de productos, por ejememplo
+   * máximo 10 productos.
+   * @param id Identificador del producto que se quiere ignorar.
+   */
+  filterProducts(id: string) {
+    this.products = this.products.filter(product => product.id !== id);
+  }
+
+  // spliceProduct(product: Product) {}
+  // binarySearch(products: Product[], left: number, right: number, id: string): number {return -1;}
+
+  /**
+   * Elimina un producto.
+   * @param id Identificador del producto a eliminar.
+   */
+  deleteProduct(id: string) {
     // Sin el subscribe no se borra correctamente
     this.productsService.deleteProduct(id).subscribe((p) => {
       console.log("Producto eliminado con éxito.");
       console.log(p);
-      this.fetchProducts();
+      this.filterProducts(id);
     });
   }
 
