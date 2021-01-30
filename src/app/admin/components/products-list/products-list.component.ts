@@ -29,8 +29,8 @@ export class ProductsListComponent implements OnInit {
   }
 
   /**
-   * Genera una nueva `lista de productos` pero sin el producto a ignorar.
-   * Esto sigue siendo ineficiente. Lo ideal sería mantener una
+   * Genera una nueva `lista de productos` pero ignorando el producto especificado
+   * por parámetro. Esto sigue siendo ineficiente. Lo ideal sería mantener una
    * lista de productos con una cierta cantidad de productos, por ejemplo
    * máximo 10 productos (con un Paginator se solucionaria).
    * @param id Identificador del producto que se quiere ignorar.
