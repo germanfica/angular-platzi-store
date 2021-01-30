@@ -2,7 +2,8 @@
     margin: 0;
     .hero {
         display: grid;
-        height: 100px; // Momentaneo
+        //height: 100px; // Momentaneo
+        //height: auto;
         background-color: #3f51b5;
         background: #3f51b5;
         color: #fff;
@@ -10,8 +11,26 @@
     }
     .hero-container {
         display: grid;
+        // margin: 20px;
+        margin: 50px 50px 20px 50px;
+        //padding: 50px 0px;
+        // margin-top: 20px;
         grid-template-rows: 1fr;
-        grid-template-areas: "credits";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "links about contact"
+                             ". credits .";
+    }
+    .links{
+        grid-area: links;
+        justify-self: center;
+    }
+    .about{
+        grid-area: about;
+        justify-self: center;
+    }
+    .contact{
+        grid-area: contact;
+        // justify-self: center;
     }
     .credits {
         grid-area: credits;
@@ -22,5 +41,32 @@
         color: #fff;
         //display: block; 
         text-decoration: none;
+    }
+    h3 {
+        color: white;
+        font-weight: 500;
+    }
+    input{
+        color: white;
+    }
+    ul {
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+        li {
+            margin: 10px 0px;
+            a {
+            text-decoration: none;
+            color: white;
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .hero-container {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            grid-template-areas: "links" "about" "contact" "credits";
+            margin: 0;
+        }
     }
 }

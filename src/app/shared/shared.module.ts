@@ -18,6 +18,7 @@ import { SideHeaderComponent } from './components/side-header/side-header.compon
 import { NavigationItemsComponent } from './components/navigation-items/navigation-items.component';
 import { ShoppingCartButtonComponent } from './components/buttons/shopping-cart-button/shopping-cart-button.component';
 import { DetailButtonComponent } from './components/buttons/detail-button/detail-button.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { DetailButtonComponent } from './components/buttons/detail-button/detail
     CartComponent,
     NavigationItemsComponent,
     ShoppingCartButtonComponent,
-    DetailButtonComponent,
+    DetailButtonComponent
   ],
   // Esto es la clave para poder utilizarlos en otros componentes
   // solo se necesita importar SharedModule
@@ -44,12 +45,14 @@ import { DetailButtonComponent } from './components/buttons/detail-button/detail
     CartComponent,
     CommonModule,
     ShoppingCartButtonComponent,
-    DetailButtonComponent
+    DetailButtonComponent,
+    ReactiveFormsModule
   ],
   imports: [
     RouterModule,
     MaterialModule,
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule
   ]
 })
 export class SharedModule { }
