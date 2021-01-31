@@ -4,6 +4,7 @@ import { Product } from '@core/models/product';
 
 import { ProductsService } from '@core/services/products/products.service';
 import { Router } from '@angular/router';
+import { MyCustomValidators } from '@util/validators';
 
 @Component({
   selector: 'app-product-form',
@@ -41,9 +42,18 @@ export class ProductFormComponent implements OnInit {
     this.form = this.formBuilder.group({
       id: ['', [Validators.required]],
       title: ['', [Validators.required]],
-      price: [0, [Validators.required]],
+      price: [0, [Validators.required, MyCustomValidators.isPriceValid]],
       image: '',
       description: ['', [Validators.required]],
     });
   }
+
+  get priceField() {
+    return this.form.get('price');
+  }
+
+  // Sólo una prueba
+  // prueba() {
+  //   console.log(this.form.get('price')?.hasError('price_invalid'));
+  // }
 }
