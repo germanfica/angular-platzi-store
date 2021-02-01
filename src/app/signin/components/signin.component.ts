@@ -26,7 +26,7 @@ export class SigninComponent implements OnInit {
     });
   }
 
-  login(event: Event) {
+  signin(event: Event) {
     event.preventDefault();
   }
 }
