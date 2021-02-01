@@ -26,6 +26,16 @@ export class ProductFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  private buildForm() {
+    this.form = this.formBuilder.group({
+      id: ['', [Validators.required]],
+      title: ['', [Validators.required]],
+      price: [0, [Validators.required, MyCustomValidators.isPriceValid]],
+      image: '',
+      description: ['', [Validators.required]],
+    });
+  }
+
   createProduct(event: Event) {
     event.preventDefault();
     if(this.form.valid) {
@@ -36,16 +46,6 @@ export class ProductFormComponent implements OnInit {
         this.router.navigate(['./admin/products']);
       });
     }
-  }
-
-  private buildForm() {
-    this.form = this.formBuilder.group({
-      id: ['', [Validators.required]],
-      title: ['', [Validators.required]],
-      price: [0, [Validators.required, MyCustomValidators.isPriceValid]],
-      image: '',
-      description: ['', [Validators.required]],
-    });
   }
 
   get priceField() {
