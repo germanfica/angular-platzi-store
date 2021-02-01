@@ -13,10 +13,10 @@
                 de esta librería.
             </p>
         </div>
-        <form action="" class="form">
+        <form [formGroup]="form" class="form" (ngSubmit)="startPlatzi($event)">
             <p>Regístrate a Platzi</p>
-            <input type="text" placeholder="Nombre">
-            <input type="email" placeholder="Correo Electrónico">
+            <input formControlName="name" type="text" placeholder="Nombre">
+            <input formControlName="email" type="email" placeholder="Correo Electrónico">
             <button type="submit">Comienza ahora</button>
         </form>
         <div class="countdown">
