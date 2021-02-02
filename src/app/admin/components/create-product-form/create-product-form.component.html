@@ -1,7 +1,7 @@
 <form [formGroup]="form" (ngSubmit)="createProduct($event)">
     <mat-card>
         <mat-card-header>
-            <mat-card-title>Producto</mat-card-title>
+            <mat-card-title>Product</mat-card-title>
         </mat-card-header>
         <mat-card-content>
             <!-- Id -->
@@ -30,15 +30,16 @@
                 <textarea matInput formControlName="description" type="text"></textarea>
             </mat-form-field>
         </mat-card-content>
+        <!-- Warnings -->
         <div *ngIf="form.get('price')?.errors && form.get('price')?.dirty">
-            <mat-error *ngIf="priceField?.hasError('price_invalid')">El campo price no es válido. No te debes
-                pasar
-                de $10000.</mat-error>
-            <mat-error *ngIf="priceField?.hasError('required')">El campo price es requerido.</mat-error>
+            <mat-error *ngIf="priceField?.hasError('price_invalid')">
+                Price field is invalid. You must not exceed $10000.
+            </mat-error>
+            <mat-error *ngIf="priceField?.hasError('required')">Price field is required.</mat-error>
         </div>
         <!-- <button mat-raised-button color="accent" (click)="prueba()">Prueba</button> -->
         <mat-card-actions>
-            <button [disabled]="form.invalid" mat-raised-button color="primary" type="submit">Crear producto</button>
+            <button [disabled]="form.invalid" mat-raised-button color="primary" type="submit">Create product</button>
         </mat-card-actions>
     </mat-card>
 </form>

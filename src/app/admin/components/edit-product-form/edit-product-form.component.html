@@ -26,6 +26,7 @@
                 <textarea matInput formControlName="description" type="text"></textarea>
             </mat-form-field>
         </mat-card-content>
+        <!-- Warnings -->
         <div *ngIf="form.get('price')?.errors && form.get('price')?.dirty">
             <mat-error *ngIf="priceField?.hasError('price_invalid')">
                 Price field is invalid. You must not exceed $10000.
