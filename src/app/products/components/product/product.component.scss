@@ -4,9 +4,9 @@
   }
   .hero-container {
     display: grid;
-    grid-template-columns: 106px 1fr;
+    grid-template-columns: auto 1fr;
     grid-template-areas: "detail-button shopping-cart-button";
-    //row-gap: 8px;
+    column-gap: 8px;
   }
   .detail-button {
     display: grid;
@@ -23,11 +23,9 @@
   .hero-description {
     padding-top: 10px;
   }
-
   img {
     max-width: 100%;
   }
-
   .crop-image {
     height: 160px;
     width: 100%;
@@ -35,7 +33,6 @@
     position: relative;
     //position: block;
   }
-
   .crop-image img {
     position: absolute;
     top: 50%;
@@ -43,7 +40,6 @@
     transform: translate(-50%, -50%);
     max-width: 100%;
   }
-
   @media screen and (max-width: 921px) {
     .hero-container {
       row-gap: 10px;
