@@ -9,7 +9,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AdminTableComponent } from './components/admin-table/admin-table.component';
-import { ProductsListComponent } from './components/products-list/products-list.component';
+import { ProductListComponent } from './components/product-list/product-list.component';
 import { CreateProductFormComponent } from './components/create-product-form/create-product-form.component';
 import { EditProductFormComponent } from './components/edit-product-form/edit-product-form.component';
 
@@ -19,7 +19,7 @@ import { EditProductFormComponent } from './components/edit-product-form/edit-pr
     NavComponent,
     DashboardComponent,
     AdminTableComponent,
-    ProductsListComponent,
+    ProductListComponent,
     CreateProductFormComponent,
     EditProductFormComponent
   ],

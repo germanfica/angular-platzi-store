@@ -4,11 +4,11 @@ import { Product } from '@core/models/product';
 import { ProductsService } from '@core/services/products/products.service';
 
 @Component({
-  selector: 'app-products-list',
-  templateUrl: './products-list.component.html',
-  styleUrls: ['./products-list.component.scss']
+  selector: 'app-product-list',
+  templateUrl: './product-list.component.html',
+  styleUrls: ['./product-list.component.scss']
 })
-export class ProductsListComponent implements OnInit {
+export class ProductListComponent implements OnInit {
   products: Product[] = [];
   displayedColumns: string[] = ['id', 'title', 'price', 'actions'];
 
