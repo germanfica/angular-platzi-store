@@ -7,11 +7,11 @@ import { Router } from '@angular/router';
 import { MyCustomValidators } from '@util/validators';
 
 @Component({
-  selector: 'app-product-form',
-  templateUrl: './product-form.component.html',
-  styleUrls: ['./product-form.component.scss']
+  selector: 'app-create-product-form',
+  templateUrl: './create-product-form.component.html',
+  styleUrls: ['./create-product-form.component.scss']
 })
-export class ProductFormComponent implements OnInit {
+export class CreateProductFormComponent implements OnInit {
   form: FormGroup;
 
   constructor(

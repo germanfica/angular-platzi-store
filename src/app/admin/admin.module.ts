@@ -10,7 +10,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AdminTableComponent } from './components/admin-table/admin-table.component';
 import { ProductsListComponent } from './components/products-list/products-list.component';
-import { ProductFormComponent } from './components/product-form/product-form.component';
+import { CreateProductFormComponent } from './components/create-product-form/create-product-form.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,7 @@ import { ProductFormComponent } from './components/product-form/product-form.com
     DashboardComponent,
     AdminTableComponent,
     ProductsListComponent,
-    ProductFormComponent
+    CreateProductFormComponent
   ],
   imports: [
     CommonModule,

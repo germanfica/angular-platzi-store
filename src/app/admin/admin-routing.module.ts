@@ -4,7 +4,7 @@ import { AdminTableComponent } from './components/admin-table/admin-table.compon
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NavComponent } from './components/nav/nav.component';
 import { OldProductFormComponent } from './components/old-product-form/old-product-form.component';
-import { ProductFormComponent } from './components/product-form/product-form.component';
+import { CreateProductFormComponent } from './components/create-product-form/create-product-form.component';
 import { ProductsListComponent } from './components/products-list/products-list.component';
 
 const routes: Routes = [
@@ -30,7 +30,7 @@ const routes: Routes = [
       },
       {
         path: 'products/create',
-        component: ProductFormComponent
+        component: CreateProductFormComponent
       }
     ]
   }
