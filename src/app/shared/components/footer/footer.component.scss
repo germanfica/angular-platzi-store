@@ -30,7 +30,28 @@
     }
     .contact{
         grid-area: contact;
+    }
+    .contact-box{
+        margin: 0;
+        display: grid;
+        grid-template-columns: 1fr 100px;
+        grid-template-rows: 1fr auto 1fr;
+        grid-template-areas: "contact-title ."
+        "contact-field contact-button"
+        "contact-warning .";
         // justify-self: center;
+    }
+    .contact-title{
+        grid-area: contact-title;
+    }
+    .contact-field{
+        grid-area: contact-field;
+    }
+    .contact-button{
+        grid-area: contact-button;
+    }
+    .contact-warning{
+        grid-area: contact-warning;
     }
     .credits {
         grid-area: credits;
@@ -59,12 +80,16 @@
             }
         }
     }
-    mat-form-field.mat-form-field {
-        color: white;
-        font-weight: 14px;
-        //border: white;
+    mat-form-field.mat-form-field{
+        color: yellow;
+        font-size: 16px;
     }
-    
+    ::ng-deep .mat-form-field-wrapper {
+        padding-bottom: 0;
+    }
+    ::ng-deep .mat-form-field-appearance-outline .mat-form-field-wrapper {
+        margin: 0;
+    }
     @media screen and (max-width: 768px) {
         .hero-container {
             grid-template-columns: 1fr;

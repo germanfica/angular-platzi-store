@@ -30,16 +30,26 @@
         </div>
 
         <div class="contact">
-            <div class="box">
-                <h3>Contacto</h3>
-                <mat-form-field appearance="outline" color="accent">
+            <div class="contact-box">
+                <h3 class="contact-title">Contacto</h3>
+                <mat-form-field
+                appearance="outline" 
+                color="accent"
+                class="contact-field">
                     <mat-label>E-mail</mat-label>
                     <input matInput [formControl]="emailField" type="email">
                 </mat-form-field>
                 
                 <!-- {{ emailField.valid }} -->
-                <button mat-raised-button [disabled]="emailField.invalid" (click)="sendEmail()">Enviar</button>
-                <mat-error *ngIf="emailField.invalid">El campo no es válido.</mat-error>
+                <button mat-raised-button
+                [disabled]="emailField.invalid"
+                (click)="sendEmail()"
+                class="contact-button">
+                    Enviar
+                </button>
+                <mat-error *ngIf="emailField.invalid" class="contact-warning">
+                    El campo no es válido.
+                </mat-error>
             </div>
         </div>
 
