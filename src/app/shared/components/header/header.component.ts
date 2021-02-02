@@ -1,5 +1,6 @@
 import { Component, HostListener, Input, OnInit } from '@angular/core';
 import { MatDrawer } from '@angular/material/sidenav';
+import { CartService } from '@core/services/cart/cart.service';
 
 @Component({
   selector: 'app-header',
@@ -11,6 +12,22 @@ export class HeaderComponent implements OnInit {
   @Input() sideHeaderDrawer: MatDrawer = {} as MatDrawer;
   isDesktop: boolean = true;
   innerWidth: number = 0; // Ancho de la ventana
+  total: number = 0;
+
+  constructor(
+    // Importamos CartService como una inyección de dependencia
+    // en el constructor como una variable privada.
+    private cartService: CartService
+  ) {
+    this.cartService.cartChange().subscribe((products) => {
+      console.log(products);
+      this.total = products.length;
+    });
+  }
+
+  ngOnInit(): void {
+    this._updateIsDesktop();
+  }
 
   /**
    * Este método me avisa si hubo un cambio en el tamaño de la ventana del navegador.
@@ -34,11 +51,4 @@ export class HeaderComponent implements OnInit {
       this.isDesktop = false;
     }
   }
-
-  constructor() { }
-
-  ngOnInit(): void {
-    this._updateIsDesktop();
-  }
-
 }
