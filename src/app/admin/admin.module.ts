@@ -11,6 +11,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AdminTableComponent } from './components/admin-table/admin-table.component';
 import { ProductsListComponent } from './components/products-list/products-list.component';
 import { CreateProductFormComponent } from './components/create-product-form/create-product-form.component';
+import { EditProductFormComponent } from './components/edit-product-form/edit-product-form.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { CreateProductFormComponent } from './components/create-product-form/cre
     DashboardComponent,
     AdminTableComponent,
     ProductsListComponent,
-    CreateProductFormComponent
+    CreateProductFormComponent,
+    EditProductFormComponent
   ],
   imports: [
     CommonModule,
