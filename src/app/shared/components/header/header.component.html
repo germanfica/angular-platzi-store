@@ -39,7 +39,7 @@
     <div class="shopping-cart">
       <a mat-icon-button>
         <mat-icon>shopping_cart</mat-icon>
-        <span [matBadge]="total"></span>
+        <span [matBadge]="total$ | async"></span>
       </a>
     </div>
 
