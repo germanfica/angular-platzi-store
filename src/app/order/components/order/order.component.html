@@ -19,14 +19,38 @@
             {{ product.title }}
           </li>
         </ul>
+        <!-- Productos v2 -->
+        <mat-card *ngFor="let product of products">
+          <mat-card-header>
+            <img mat-card-avatar [src]="product.image">
+            <mat-card-title>{{ product.title }} (2)</mat-card-title>
+            <mat-card-subtitle>{{ product.price }}</mat-card-subtitle>
+          </mat-card-header>
+
+          <!-- Control de cantidad de productos -->
+          <div>
+            <button mat-mini-fab color="primary" class="quantity-button" disabled> - </button>
+            <button mat-mini-fab color="primary" class="quantity-button"> + </button>
+          </div>
+          <!-- Acciones -->
+          <mat-card-actions>
+            <button mat-button color="primary">Eliminar</button>
+          </mat-card-actions>
+        </mat-card>
+        <!-- Total -->
+        <br>
+        <mat-divider></mat-divider>
+        <h2>Total: $65454</h2>
         <!-- Boton siguiente -->
         <div>
-          <button [disabled]="products.length === 0" mat-raised-button matStepperNext color="primary">Continue shopping</button>
+          <button [disabled]="products.length === 0" mat-raised-button matStepperNext color="primary">Continue
+            shopping</button>
         </div>
 
         <mat-form-field>
           <mat-label>Name</mat-label>
-          <input matInput [disabled]="products.length === 0" placeholder="Last name, First name" formControlName="firstCtrl" >
+          <input matInput [disabled]="products.length === 0" placeholder="Last name, First name"
+            formControlName="firstCtrl">
         </mat-form-field>
       </div>
     </form>
