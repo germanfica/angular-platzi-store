@@ -1,6 +1,56 @@
 <p>order works!</p>
-<ul>
-    <li *ngFor="let product of (products$ | async)">
-        {{ product.title }}
-    </li>
-</ul>
+
+
+
+<mat-horizontal-stepper [linear]="isLinear" #stepper>
+  <!-- Paso 1 -->
+  <mat-step [stepControl]="firstFormGroup">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>Your products</ng-template>
+
+      <div *ngIf="(products$ | async) as products">
+        <!-- No hay productos -->
+        <p *ngIf="products.length === 0">
+          Your cart is empty.
+        </p>
+        <!-- Productos -->
+        <ul>
+          <li *ngFor="let product of products">
+            {{ product.title }}
+          </li>
+        </ul>
+        <!-- Boton siguiente -->
+        <div>
+          <button [disabled]="products.length === 0" mat-raised-button matStepperNext color="primary">Continue shopping</button>
+        </div>
+
+        <mat-form-field>
+          <mat-label>Name</mat-label>
+          <input matInput [disabled]="products.length === 0" placeholder="Last name, First name" formControlName="firstCtrl" >
+        </mat-form-field>
+      </div>
+    </form>
+  </mat-step>
+  <!-- Paso 2 -->
+  <mat-step [stepControl]="secondFormGroup" label="Personal data">
+    <form [formGroup]="secondFormGroup">
+      <mat-form-field>
+        <mat-label>Address</mat-label>
+        <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY" required>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <!-- Paso 3 -->
+  <mat-step>
+    <ng-template matStepLabel>Payment</ng-template>
+    <p>You are now done.</p>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button (click)="stepper.reset()">Reset</button>
+    </div>
+  </mat-step>
+</mat-horizontal-stepper>
