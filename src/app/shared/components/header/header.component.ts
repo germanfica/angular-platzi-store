@@ -25,7 +25,7 @@ export class HeaderComponent implements OnInit {
     private cartService: CartService
   ) {
     // Ya no hace falta subscribirse
-    this.total$ = this.cartService.cartChange().pipe(
+    this.total$ = this.cartService.cart$.pipe(
       map((products: Product[]) => products.length)
     );
   }

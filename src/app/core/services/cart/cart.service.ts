@@ -9,9 +9,11 @@ import { BehaviorSubject, Observable } from 'rxjs';
 export class CartService {
   private products: Product[] = [];
   private cart: BehaviorSubject<Product[]>;
+  cart$!: Observable<Product[]>;
 
   constructor() {
     this.cart = new BehaviorSubject<Product[]>([]);
+    this.cart$ = this.cart.asObservable();
   }
 
   /**
@@ -22,9 +24,9 @@ export class CartService {
    * - https://angular.io/guide/observables-in-angular
    * - https://stackoverflow.com/questions/37671700/angular2-style-guide-property-with-dollar-sign
    */
-  cartChange(): Observable<Product[]> {
-    return this.cart.asObservable();
-  }
+  // cartChange(): Observable<Product[]> {
+  //   return this.cart.asObservable();
+  // }
 
   /**
    * Agrega un nuevo producto al carrito de compras.
