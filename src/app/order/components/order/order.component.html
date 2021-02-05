@@ -1,7 +1,5 @@
 <p>order works!</p>
 
-
-
 <mat-horizontal-stepper [linear]="isLinear" #stepper>
   <!-- Paso 1 -->
   <mat-step [stepControl]="firstFormGroup">
@@ -20,10 +18,10 @@
           </li>
         </ul>
         <!-- Productos v2 -->
-        <mat-card *ngFor="let product of products">
+        <mat-card *ngFor="let product of (products | removeDoubleProducts)">
           <mat-card-header>
             <img mat-card-avatar [src]="product.image">
-            <mat-card-title>{{ product.title }} (2)</mat-card-title>
+            <mat-card-title>{{ product.title }} ({{ 1 | countingProducts: product:products }})</mat-card-title>
             <mat-card-subtitle>{{ product.price }}</mat-card-subtitle>
           </mat-card-header>
 
