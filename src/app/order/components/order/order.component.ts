@@ -34,6 +34,12 @@ export class OrderComponent implements OnInit {
     });
   }
 
+  addCart(product: Product): void {
+    console.log('Agregar al carrito');
+    // this.productClicked.emit(this.product.id);
+    this._cartService.addCart(product);
+  }
+
   deleteProduct(productId: String) {
     this._cartService.deleteCart(productId);
   }

@@ -28,7 +28,7 @@
           <!-- Control de cantidad de productos -->
           <div *ngIf="(1 | countingProducts: product:products) as count">
             <button mat-mini-fab color="primary" class="quantity-button" [disabled]="count===1"> - </button>
-            <button mat-mini-fab color="primary" class="quantity-button"> + </button>
+            <button mat-mini-fab color="primary" class="quantity-button" (click)="addCart(product)"> + </button>
           </div>
           <!-- Acciones -->
           <mat-card-actions>
