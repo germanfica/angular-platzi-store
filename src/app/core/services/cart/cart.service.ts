@@ -36,4 +36,12 @@ export class CartService {
     this.products = [...this.products, product];
     this.cart.next(this.products);
   }
+
+  // Necesito un internalId para eliminar objetos de forma rapida
+  deleteCart(id: String) {
+    this.products = this.products.filter(product => product.id !== id);
+    console.log("id deleted: " + id);
+    console.log(this.products);
+    this.cart.next(this.products);
+  }
 }

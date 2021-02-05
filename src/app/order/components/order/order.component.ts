@@ -34,4 +34,8 @@ export class OrderComponent implements OnInit {
     });
   }
 
+  deleteProduct(productId: String) {
+    this._cartService.deleteCart(productId);
+  }
+
 }

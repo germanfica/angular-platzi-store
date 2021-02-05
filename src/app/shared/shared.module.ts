@@ -20,6 +20,7 @@ import { ShoppingCartButtonComponent } from './components/buttons/shopping-cart-
 import { DetailButtonComponent } from './components/buttons/detail-button/detail-button.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { RemoveDoubleProductsPipe } from './pipes/remove-double-products/remove-double-products.pipe';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     CartComponent,
     NavigationItemsComponent,
     ShoppingCartButtonComponent,
-    DetailButtonComponent
+    DetailButtonComponent,
+    RemoveDoubleProductsPipe
   ],
   // Esto es la clave para poder utilizarlos en otros componentes
   // solo se necesita importar SharedModule
@@ -49,7 +51,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     ShoppingCartButtonComponent,
     DetailButtonComponent,
     ReactiveFormsModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    RemoveDoubleProductsPipe
   ],
   imports: [
     RouterModule,
