@@ -26,8 +26,8 @@
           </mat-card-header>
 
           <!-- Control de cantidad de productos -->
-          <div>
-            <button mat-mini-fab color="primary" class="quantity-button" disabled> - </button>
+          <div *ngIf="(1 | countingProducts: product:products) as count">
+            <button mat-mini-fab color="primary" class="quantity-button" [disabled]="count===1"> - </button>
             <button mat-mini-fab color="primary" class="quantity-button"> + </button>
           </div>
           <!-- Acciones -->
