@@ -26,68 +26,113 @@ export class OldProductFormComponent {
   hasUnitNumber = false;
 
   states = [
-    {name: 'Alabama', abbreviation: 'AL'},
-    {name: 'Alaska', abbreviation: 'AK'},
-    {name: 'American Samoa', abbreviation: 'AS'},
-    {name: 'Arizona', abbreviation: 'AZ'},
-    {name: 'Arkansas', abbreviation: 'AR'},
-    {name: 'California', abbreviation: 'CA'},
-    {name: 'Colorado', abbreviation: 'CO'},
-    {name: 'Connecticut', abbreviation: 'CT'},
-    {name: 'Delaware', abbreviation: 'DE'},
-    {name: 'District Of Columbia', abbreviation: 'DC'},
-    {name: 'Federated States Of Micronesia', abbreviation: 'FM'},
-    {name: 'Florida', abbreviation: 'FL'},
-    {name: 'Georgia', abbreviation: 'GA'},
-    {name: 'Guam', abbreviation: 'GU'},
-    {name: 'Hawaii', abbreviation: 'HI'},
-    {name: 'Idaho', abbreviation: 'ID'},
-    {name: 'Illinois', abbreviation: 'IL'},
-    {name: 'Indiana', abbreviation: 'IN'},
-    {name: 'Iowa', abbreviation: 'IA'},
-    {name: 'Kansas', abbreviation: 'KS'},
-    {name: 'Kentucky', abbreviation: 'KY'},
-    {name: 'Louisiana', abbreviation: 'LA'},
-    {name: 'Maine', abbreviation: 'ME'},
-    {name: 'Marshall Islands', abbreviation: 'MH'},
-    {name: 'Maryland', abbreviation: 'MD'},
-    {name: 'Massachusetts', abbreviation: 'MA'},
-    {name: 'Michigan', abbreviation: 'MI'},
-    {name: 'Minnesota', abbreviation: 'MN'},
-    {name: 'Mississippi', abbreviation: 'MS'},
-    {name: 'Missouri', abbreviation: 'MO'},
-    {name: 'Montana', abbreviation: 'MT'},
-    {name: 'Nebraska', abbreviation: 'NE'},
-    {name: 'Nevada', abbreviation: 'NV'},
-    {name: 'New Hampshire', abbreviation: 'NH'},
-    {name: 'New Jersey', abbreviation: 'NJ'},
-    {name: 'New Mexico', abbreviation: 'NM'},
-    {name: 'New York', abbreviation: 'NY'},
-    {name: 'North Carolina', abbreviation: 'NC'},
-    {name: 'North Dakota', abbreviation: 'ND'},
-    {name: 'Northern Mariana Islands', abbreviation: 'MP'},
-    {name: 'Ohio', abbreviation: 'OH'},
-    {name: 'Oklahoma', abbreviation: 'OK'},
-    {name: 'Oregon', abbreviation: 'OR'},
-    {name: 'Palau', abbreviation: 'PW'},
-    {name: 'Pennsylvania', abbreviation: 'PA'},
-    {name: 'Puerto Rico', abbreviation: 'PR'},
-    {name: 'Rhode Island', abbreviation: 'RI'},
-    {name: 'South Carolina', abbreviation: 'SC'},
-    {name: 'South Dakota', abbreviation: 'SD'},
-    {name: 'Tennessee', abbreviation: 'TN'},
-    {name: 'Texas', abbreviation: 'TX'},
-    {name: 'Utah', abbreviation: 'UT'},
-    {name: 'Vermont', abbreviation: 'VT'},
-    {name: 'Virgin Islands', abbreviation: 'VI'},
-    {name: 'Virginia', abbreviation: 'VA'},
-    {name: 'Washington', abbreviation: 'WA'},
-    {name: 'West Virginia', abbreviation: 'WV'},
-    {name: 'Wisconsin', abbreviation: 'WI'},
-    {name: 'Wyoming', abbreviation: 'WY'}
+    { name: 'Alabama', abbreviation: 'AL' },
+    { name: 'Alaska', abbreviation: 'AK' },
+    { name: 'American Samoa', abbreviation: 'AS' },
+    { name: 'Arizona', abbreviation: 'AZ' },
+    { name: 'Arkansas', abbreviation: 'AR' },
+    { name: 'California', abbreviation: 'CA' },
+    { name: 'Colorado', abbreviation: 'CO' },
+    { name: 'Connecticut', abbreviation: 'CT' },
+    { name: 'Delaware', abbreviation: 'DE' },
+    { name: 'District Of Columbia', abbreviation: 'DC' },
+    { name: 'Federated States Of Micronesia', abbreviation: 'FM' },
+    { name: 'Florida', abbreviation: 'FL' },
+    { name: 'Georgia', abbreviation: 'GA' },
+    { name: 'Guam', abbreviation: 'GU' },
+    { name: 'Hawaii', abbreviation: 'HI' },
+    { name: 'Idaho', abbreviation: 'ID' },
+    { name: 'Illinois', abbreviation: 'IL' },
+    { name: 'Indiana', abbreviation: 'IN' },
+    { name: 'Iowa', abbreviation: 'IA' },
+    { name: 'Kansas', abbreviation: 'KS' },
+    { name: 'Kentucky', abbreviation: 'KY' },
+    { name: 'Louisiana', abbreviation: 'LA' },
+    { name: 'Maine', abbreviation: 'ME' },
+    { name: 'Marshall Islands', abbreviation: 'MH' },
+    { name: 'Maryland', abbreviation: 'MD' },
+    { name: 'Massachusetts', abbreviation: 'MA' },
+    { name: 'Michigan', abbreviation: 'MI' },
+    { name: 'Minnesota', abbreviation: 'MN' },
+    { name: 'Mississippi', abbreviation: 'MS' },
+    { name: 'Missouri', abbreviation: 'MO' },
+    { name: 'Montana', abbreviation: 'MT' },
+    { name: 'Nebraska', abbreviation: 'NE' },
+    { name: 'Nevada', abbreviation: 'NV' },
+    { name: 'New Hampshire', abbreviation: 'NH' },
+    { name: 'New Jersey', abbreviation: 'NJ' },
+    { name: 'New Mexico', abbreviation: 'NM' },
+    { name: 'New York', abbreviation: 'NY' },
+    { name: 'North Carolina', abbreviation: 'NC' },
+    { name: 'North Dakota', abbreviation: 'ND' },
+    { name: 'Northern Mariana Islands', abbreviation: 'MP' },
+    { name: 'Ohio', abbreviation: 'OH' },
+    { name: 'Oklahoma', abbreviation: 'OK' },
+    { name: 'Oregon', abbreviation: 'OR' },
+    { name: 'Palau', abbreviation: 'PW' },
+    { name: 'Pennsylvania', abbreviation: 'PA' },
+    { name: 'Puerto Rico', abbreviation: 'PR' },
+    { name: 'Rhode Island', abbreviation: 'RI' },
+    { name: 'South Carolina', abbreviation: 'SC' },
+    { name: 'South Dakota', abbreviation: 'SD' },
+    { name: 'Tennessee', abbreviation: 'TN' },
+    { name: 'Texas', abbreviation: 'TX' },
+    { name: 'Utah', abbreviation: 'UT' },
+    { name: 'Vermont', abbreviation: 'VT' },
+    { name: 'Virgin Islands', abbreviation: 'VI' },
+    { name: 'Virginia', abbreviation: 'VA' },
+    { name: 'Washington', abbreviation: 'WA' },
+    { name: 'West Virginia', abbreviation: 'WV' },
+    { name: 'Wisconsin', abbreviation: 'WI' },
+    { name: 'Wyoming', abbreviation: 'WY' }
   ];
 
-  constructor(private fb: FormBuilder, private ps: ProductsService) {}
+  defaultProducts: Product[] = [
+    {
+      id: '1',
+      image: 'assets/images/camiseta.png',
+      title: 'Camiseta',
+      price: 80000,
+      description: 'bla bla bla bla bla'
+    },
+    {
+      id: '2',
+      image: 'assets/images/hoodie.png',
+      title: 'Hoodie',
+      price: 80000,
+      description: 'bla bla bla bla bla'
+    },
+    {
+      id: '3',
+      image: 'assets/images/mug.png',
+      title: 'Hoodie',
+      price: 80000,
+      description: 'bla bla bla bla bla'
+    },
+    {
+      id: '4',
+      image: 'assets/images/pin.png',
+      title: 'Pin',
+      price: 80000,
+      description: 'bla bla bla bla bla'
+    },
+    {
+      id: '5',
+      image: 'assets/images/stickers1.png',
+      title: 'Stickers 1',
+      price: 80000,
+      description: 'bla bla bla bla bla'
+    },
+    {
+      id: '6',
+      image: 'assets/images/stickers2.png',
+      title: 'Stickers 2',
+      price: 80000,
+      description: 'bla bla bla bla bla'
+    }
+  ];
+
+  constructor(private fb: FormBuilder, private ps: ProductsService) { }
 
   onSubmit() {
     alert('Thanks!');
@@ -135,10 +180,19 @@ export class OldProductFormComponent {
    */
   deleteProduct() {
     const id: string = '731';
-    
+
     this.ps.deleteProduct(id).subscribe((p) => {
       console.log("Producto eliminado con éxito.");
       console.log(p);
+    });
+  }
+
+  /**
+   * Restaura todos los productos por defecto de la tienda.
+   */
+  restoreDefaultProducts(): void {
+    this.defaultProducts.forEach((product) => {
+      this.ps.createProduct(product);
     });
   }
 }
