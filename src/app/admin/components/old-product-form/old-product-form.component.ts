@@ -191,8 +191,14 @@ export class OldProductFormComponent {
    * Restaura todos los productos por defecto de la tienda.
    */
   restoreDefaultProducts(): void {
-    this.defaultProducts.forEach((product) => {
-      this.ps.createProduct(product);
+    this.ps.getAllProducts().subscribe((products) => {
+      if(products.length !==0) {
+        console.log("Restoring default products.");
+        this.defaultProducts.forEach((product) => {
+          this.ps.createProduct(product);
+        });
+        console.log("Default products successfully restored.");
+      }
     });
   }
 }
