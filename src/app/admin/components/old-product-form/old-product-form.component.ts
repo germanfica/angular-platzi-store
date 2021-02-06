@@ -105,7 +105,7 @@ export class OldProductFormComponent {
     {
       id: '3',
       image: 'assets/images/mug.png',
-      title: 'Hoodie',
+      title: 'Mug',
       price: 80000,
       description: 'bla bla bla bla bla'
     },
