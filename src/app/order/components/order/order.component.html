@@ -41,7 +41,7 @@
         <br>
         <mat-divider></mat-divider>
         <!-- Tendria que hacer un pipe para obtener el total -->
-        <h2>Total: {{ totalAmount() | currency }}</h2>
+        <h2 *ngIf="products.length !== 0">Total: {{ totalAmount() | currency }}</h2>
         <!-- Boton siguiente -->
         <div>
           <button [disabled]="products.length === 0" mat-raised-button matStepperNext color="primary">Continue
