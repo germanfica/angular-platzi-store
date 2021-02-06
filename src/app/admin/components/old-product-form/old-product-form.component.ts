@@ -195,7 +195,9 @@ export class OldProductFormComponent {
       if(products.length === 0) {
         console.log("Restoring default products.");
         this.defaultProducts.forEach((product) => {
-          this.ps.createProduct(product);
+          this.ps.createProduct(product).subscribe((p) => {
+            console.log(p.title + " successfully restored.");
+          });
         });
         console.log("Default products successfully restored.");
       }
