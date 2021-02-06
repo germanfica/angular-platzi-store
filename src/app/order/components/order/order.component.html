@@ -28,7 +28,8 @@
 
             <!-- Control de cantidad de productos -->
             <div>
-              <button mat-mini-fab color="primary" class="quantity-button" [disabled]="count===1" (click)="remove(product.id)"> - </button>
+              <button mat-mini-fab color="primary" class="quantity-button" [disabled]="count===1"
+                (click)="remove(product.id)"> - </button>
               <button mat-mini-fab color="primary" class="quantity-button" (click)="addCart(product)"> + </button>
             </div>
             <!-- Acciones -->
@@ -38,10 +39,10 @@
           </div>
         </mat-card>
         <!-- Total -->
-        <br>
-        <mat-divider></mat-divider>
-        <!-- Tendria que hacer un pipe para obtener el total -->
-        <h2 *ngIf="products.length !== 0">Total: {{ totalAmount() | currency }}</h2>
+        <div *ngIf="products.length !== 0">
+          <mat-divider></mat-divider>
+          <h2>Total: {{ totalAmount() | currency }}</h2>
+        </div>
         <!-- Boton siguiente -->
         <div>
           <button [disabled]="products.length === 0" mat-raised-button matStepperNext color="primary">Continue
