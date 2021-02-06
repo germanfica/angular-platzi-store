@@ -28,12 +28,12 @@
 
             <!-- Control de cantidad de productos -->
             <div>
-              <button mat-mini-fab color="primary" class="quantity-button" [disabled]="count===1"> - </button>
+              <button mat-mini-fab color="primary" class="quantity-button" [disabled]="count===1" (click)="remove(product.id)"> - </button>
               <button mat-mini-fab color="primary" class="quantity-button" (click)="addCart(product)"> + </button>
             </div>
             <!-- Acciones -->
             <mat-card-actions>
-              <button mat-button color="primary" (click)="deleteProduct(product.id)">Eliminar</button>
+              <button mat-button color="primary" (click)="removeFromCart(product.id)">Eliminar</button>
             </mat-card-actions>
           </div>
         </mat-card>

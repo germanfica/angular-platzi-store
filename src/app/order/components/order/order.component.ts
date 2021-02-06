@@ -40,10 +40,25 @@ export class OrderComponent implements OnInit {
     this._cartService.addCart(product);
   }
 
-  deleteProduct(productId: String) {
-    this._cartService.deleteCart(productId);
+  /**
+   * Quita el conjunto de un producto del carrito.
+   * @param productId Identificador del producto.
+   */
+  removeFromCart(productId: String) {
+    this._cartService.removeFromCart(productId);
   }
 
+  /**
+   * Quita un producto especifico del carrito.
+   * @param productId Identificador del producto.
+   */
+  remove(productId: String) {
+    this._cartService.remove(productId);
+  }
+
+  /**
+   * Precio total de todos los productos.
+   */
   totalAmount(): number {
     let counter: number = 0;
 
@@ -55,5 +70,4 @@ export class OrderComponent implements OnInit {
 
     return counter;
   }
-
 }
