@@ -18,7 +18,7 @@
           </li>
         </ul>
         <!-- Productos v2 -->
-        <mat-card *ngFor="let product of (products | removeDoubleProducts)">
+        <mat-card *ngFor="let product of (products | removeDoubleProducts) as productsWithoutDuplicates">
           <div *ngIf="(1 | countingProducts: product:products) as count">
             <mat-card-header>
               <img mat-card-avatar [src]="product.image">
@@ -40,7 +40,8 @@
         <!-- Total -->
         <br>
         <mat-divider></mat-divider>
-        <h2>Total: $65454</h2>
+        <!-- Tendria que hacer un pipe para obtener el total -->
+        <h2>Total: {{ totalAmount() | currency }}</h2>
         <!-- Boton siguiente -->
         <div>
           <button [disabled]="products.length === 0" mat-raised-button matStepperNext color="primary">Continue
