@@ -12,11 +12,11 @@
           Your cart is empty.
         </p>
         <!-- Productos -->
-        <ul>
+        <!-- <ul>
           <li *ngFor="let product of products">
             {{ product.title }}
           </li>
-        </ul>
+        </ul> -->
         <!-- Productos v2 -->
         <mat-card *ngFor="let product of (products | removeDoubleProducts) as productsWithoutDuplicates">
           <div *ngIf="(1 | countingProducts: product:products) as count">
