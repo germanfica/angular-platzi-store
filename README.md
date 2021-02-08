@@ -47,3 +47,6 @@ import { CoreModule } from '@core/core.module';
 ```typescript
 import { SharedModule } from '@shared/shared.module';
 ```
+
+## Install and setup (AngularFire, Firebase)
+https://github.com/angular/angularfire/blob/master/docs/install-and-setup.md
