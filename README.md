@@ -50,3 +50,11 @@ import { SharedModule } from '@shared/shared.module';
 
 ## Install and setup (AngularFire, Firebase)
 https://github.com/angular/angularfire/blob/master/docs/install-and-setup.md
+
+## NPM Compatible version
+```
+npm version 7.5.2 detected.
+The Angular CLI currently requires npm version 6.
+
+Please install a compatible version to proceed (`npm install --global npm@6`).
+```
