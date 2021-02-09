@@ -49,7 +49,6 @@ import { SharedModule } from '@shared/shared.module';
 ```
 
 ## Install and setup Firebase in Angular
-ng add @angular/fire
 ### Paso 1: Instalar angularfire con npm.
 ```bash
 sudo npm install firebase @angular/fire --save
