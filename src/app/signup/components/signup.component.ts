@@ -25,7 +25,7 @@ export class SignupComponent implements OnInit {
 
   private buildForm() {
     this.form = this.formBuilder.group({
-      name:['', [Validators.required]],
+      name: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required]],
     });
@@ -33,9 +33,9 @@ export class SignupComponent implements OnInit {
 
   signup(event: Event) {
     event.preventDefault();
-    if(this.form.valid) {
+    if (this.form.valid) {
       const value = this.form.value;
-      this.authService.createUsername(value.email, value.password).then((userCredential) => {
+      this.authService.createUserWithEmailAndPassword(value.email, value.password).then((userCredential) => {
         this.router.navigate(['/signin']);
       });
     }

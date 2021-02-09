@@ -22,12 +22,10 @@ const routes: Routes = [
       // No me convence esta ruta para hacer SEO Optimization
       {
         path: 'products',
-        canActivate: [AdminGuard],
         loadChildren: () => import('./products/products.module').then(m => m.ProductsModule)
       },
       {
         path: 'contact',
-        canActivate: [AdminGuard],
         loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule)
       },
       {
@@ -36,12 +34,10 @@ const routes: Routes = [
       },
       {
         path: 'demo',
-        canActivate: [AdminGuard],
         loadChildren: () => import('./demo/demo.module').then(m => m.DemoModule)
       },
       {
         path: 'css-grid-layout',
-        canActivate: [AdminGuard],
         loadChildren: () => import('./css-grid-layout/css-grid-layout.module').then(m => m.CssGridLayoutModule)
       },
     ]
@@ -56,6 +52,7 @@ const routes: Routes = [
   },
   {
     path: 'admin',
+    canActivate: [AdminGuard],
     loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
   },
   {
