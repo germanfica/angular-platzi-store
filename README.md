@@ -48,7 +48,14 @@ import { CoreModule } from '@core/core.module';
 import { SharedModule } from '@shared/shared.module';
 ```
 
-## Install and setup (AngularFire, Firebase)
+## Install and setup Firebase in Angular
+ng add @angular/fire
+### Paso 1: Instalar angularfire con npm.
+```bash
+sudo npm install firebase @angular/fire --save
+```
+
+### Paso 2: configurar el proyecto
 https://github.com/angular/angularfire/blob/master/docs/install-and-setup.md
 
 ## NPM Compatible version
