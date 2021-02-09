@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from '@core/services/auth/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -11,6 +13,8 @@ export class SignupComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
+    private authService: AuthService,
+    private router: Router
   ) {
     this.form = {} as FormGroup;
     this.buildForm();
@@ -29,5 +33,11 @@ export class SignupComponent implements OnInit {
 
   signup(event: Event) {
     event.preventDefault();
+    if(this.form.valid) {
+      const value = this.form.value;
+      this.authService.createUsername(value.email, value.password).then((userCredential) => {
+        this.router.navigate(['/signin']);
+      });
+    }
   }
 }
