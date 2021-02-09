@@ -6,6 +6,8 @@ import { ProductsService } from '@core/services/products/products.service';
 import { Router } from '@angular/router';
 import { MyCustomValidators } from '@util/validators';
 
+import { AngularFireStorage } from '@angular/fire/storage';
+
 @Component({
   selector: 'app-create-product-form',
   templateUrl: './create-product-form.component.html',
@@ -17,7 +19,8 @@ export class CreateProductFormComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private productsService: ProductsService,
-    private router: Router
+    private router: Router,
+    private storage: AngularFireStorage
   ) {
     this.form = {} as FormGroup;
     this.buildForm();
@@ -46,6 +49,12 @@ export class CreateProductFormComponent implements OnInit {
         this.router.navigate(['./admin/products']);
       });
     }
+  }
+
+  uploadFile(event: Event) {
+    const target = event.target as HTMLInputElement;
+    const file: File = (target.files as FileList)[0];
+    console.log(file);
   }
 
   get priceField() {

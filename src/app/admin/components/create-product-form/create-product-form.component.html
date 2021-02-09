@@ -23,6 +23,7 @@
             <mat-form-field appearance="outline" class="image">
                 <mat-label>Image</mat-label>
                 <input matInput formControlName="image" type="text">
+                <input type="file" (change)="uploadFile($event)">
             </mat-form-field>
             <!-- Description -->
             <mat-form-field appearance="outline" class="description">
