@@ -49,7 +49,7 @@ import { SharedModule } from '@shared/shared.module';
 ```
 
 # Guía de instalaciones
-Importante NUNCA usar sudo para instalar sino vas a tener problemas más adelante con los permisos. Por las dudas te dejo comandos que usé para desinstalar npm.
+Importante NUNCA USAR `sudo` para instalar sino vas a tener problemas más adelante con los permisos. Por las dudas te dejo comandos que usé para desinstalar npm. Mi consejo es NUNCA USAR `sudo`.
 
 ## Uninstall NPM
 
@@ -110,6 +110,28 @@ npm install firebase @angular/fire --save
 
 ### Paso 2: configurar el proyecto
 [Install and setup](https://github.com/angular/angularfire/blob/master/docs/install-and-setup.md)
+
+## Firebase Hosting Deploy
+
+**Paso 1:**
+
+```bash
+npm install firebase-tools
+```
+
+**Paso 2:**
+
+```bash
+npx firebase login
+```
+
+**Paso 3:**
+
+```bash
+npx firebase init
+```
+
+Nota/consejo: nunca usar sudo para esto.
 
 ## NPM Compatible version
 ```
