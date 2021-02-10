@@ -139,6 +139,28 @@ npx firebase init
 
 Nota/consejo: nunca usar sudo para esto.
 
+
+## firebase.json
+
+```bash
+{
+  "hosting": {
+    "public": "dist/platzi-store",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
+```
+
 ## NPM Compatible version
 ```
 npm version 7.5.2 detected.
