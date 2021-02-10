@@ -84,6 +84,18 @@ sudo apt-get install -y nodejs
 
 Then restart wsl2: [windows 10 - WSL Ubuntu hangs, how to restart? - Stack Overflow](https://stackoverflow.com/questions/48407070/wsl-ubuntu-hangs-how-to-restart)
 
+## Uninstall NPM package
+
+Para paquetes locales:
+```bash
+sudo npm uninstall @angular-devkit/schematics
+```
+
+Para paquetes globales:
+```bash
+sudo npm uninstall -g @angular-devkit/schematics
+```
+
 ## NPM ver paquetes instalados
 
 Lista de paquetes locales instalados:
