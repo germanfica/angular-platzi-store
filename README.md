@@ -48,14 +48,90 @@ import { CoreModule } from '@core/core.module';
 import { SharedModule } from '@shared/shared.module';
 ```
 
+# Guía de instalaciones
+Importante NUNCA USAR `sudo` para instalar sino vas a tener problemas más adelante con los permisos. Por las dudas te dejo comandos que usé para desinstalar npm. Mi consejo es NUNCA USAR `sudo`.
+
+## Uninstall NPM
+
+```bash
+sudo apt-get remove nodejs
+sudo apt-get remove npm
+```
+
+Then go to `/etc/apt/sources.list.d` and remove any node list if you have. Then do a
+```bash
+sudo apt-get update
+```
+
+**Check for any `.npm` or `.node` folder in your home folder and delete those.**
+
+If you type
+
+```bash
+which node
+```
+
+you can see the location of the node. Try `which nodejs` and `which npm` too.
+
+Source: https://stackoverflow.com/questions/32426601/how-can-i-completely-uninstall-nodejs-npm-and-node-in-ubuntu-14-04
+
+## Install NPM
+
+```bash
+curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+sudo apt-get install -y nodejs
+```
+
+Then restart wsl2: [windows 10 - WSL Ubuntu hangs, how to restart? - Stack Overflow](https://stackoverflow.com/questions/48407070/wsl-ubuntu-hangs-how-to-restart)
+
+## NPM ver paquetes instalados
+
+Lista de paquetes locales instalados:
+```bash
+npm ls --depth=0
+```
+
+Lista de paquetes globales instalados:
+
+```bash
+npm ls -g --depth=0
+```
+
+## Install Angular
+```bash
+npm install @angular/cli
+```
+
 ## Install and setup Firebase in Angular
 ### Paso 1: Instalar angularfire con npm
 ```bash
-sudo npm install firebase @angular/fire --save
+npm install firebase @angular/fire --save
 ```
 
 ### Paso 2: configurar el proyecto
 [Install and setup](https://github.com/angular/angularfire/blob/master/docs/install-and-setup.md)
+
+## Firebase Hosting Deploy
+
+**Paso 1:**
+
+```bash
+npm install firebase-tools
+```
+
+**Paso 2:**
+
+```bash
+npx firebase login
+```
+
+**Paso 3:**
+
+```bash
+npx firebase init
+```
+
+Nota/consejo: nunca usar sudo para esto.
 
 ## NPM Compatible version
 ```
