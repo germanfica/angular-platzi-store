@@ -141,6 +141,7 @@ Nota/consejo: nunca usar sudo para esto.
 
 
 ## firebase.json
+La solución al error en /admin (firebase hosting guarda archivos estáticos y no funciona muy bien con los sigle page application) es agregar el `rewrites`.
 
 ```bash
 {
