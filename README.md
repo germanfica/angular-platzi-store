@@ -116,16 +116,22 @@ npm install firebase @angular/fire --save
 **Paso 1:**
 
 ```bash
-npm install firebase-tools
+ng build --prod
 ```
 
 **Paso 2:**
 
 ```bash
-npx firebase login
+npm install firebase-tools
 ```
 
 **Paso 3:**
+
+```bash
+npx firebase login
+```
+
+**Paso 4:**
 
 ```bash
 npx firebase init
