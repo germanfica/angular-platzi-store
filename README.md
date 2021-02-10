@@ -48,10 +48,27 @@ import { CoreModule } from '@core/core.module';
 import { SharedModule } from '@shared/shared.module';
 ```
 
+# Guía de instalaciones
+Importante NUNCA usar sudo para instalar sino vas a tener problemas más adelante con los permisos. Por las dudas te dejo comandos que usé para desinstalar npm.
+
+## Install NPM
+
+```bash
+curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+sudo apt-get install -y nodejs
+```
+
+Then restart wsl2: [windows 10 - WSL Ubuntu hangs, how to restart? - Stack Overflow](https://stackoverflow.com/questions/48407070/wsl-ubuntu-hangs-how-to-restart)
+
+## Install Angular
+```bash
+npm install @angular/cli
+```
+
 ## Install and setup Firebase in Angular
 ### Paso 1: Instalar angularfire con npm
 ```bash
-sudo npm install firebase @angular/fire --save
+npm install firebase @angular/fire --save
 ```
 
 ### Paso 2: configurar el proyecto
