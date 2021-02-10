@@ -51,6 +51,30 @@ import { SharedModule } from '@shared/shared.module';
 # Guía de instalaciones
 Importante NUNCA usar sudo para instalar sino vas a tener problemas más adelante con los permisos. Por las dudas te dejo comandos que usé para desinstalar npm.
 
+## Uninstall NPM
+
+```bash
+sudo apt-get remove nodejs
+sudo apt-get remove npm
+```
+
+Then go to `/etc/apt/sources.list.d` and remove any node list if you have. Then do a
+```bash
+sudo apt-get update
+```
+
+**Check for any `.npm` or `.node` folder in your home folder and delete those.**
+
+If you type
+
+```bash
+which node
+```
+
+you can see the location of the node. Try `which nodejs` and `which npm` too.
+
+Source: https://stackoverflow.com/questions/32426601/how-can-i-completely-uninstall-nodejs-npm-and-node-in-ubuntu-14-04
+
 ## Install NPM
 
 ```bash
