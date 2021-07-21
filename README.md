@@ -181,3 +181,11 @@ The Angular CLI currently requires npm version 6.
 
 Please install a compatible version to proceed (`npm install --global npm@6`).
 ```
+
+## Run an exiting project
+Commands to run when you want to run an angular project for the first time:
+```bash
+npm update
+npm install
+ng serve
+```
