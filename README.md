@@ -149,6 +149,12 @@ npx firebase login
 npx firebase init
 ```
 
+**Paso 5:**
+
+```bash
+npx firebase deploy
+```
+
 Nota/consejo: nunca usar sudo para esto.
 
 
