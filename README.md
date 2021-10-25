@@ -114,6 +114,11 @@ npm ls -g --depth=0
 npm install @angular/cli
 ```
 
+## Install Angular on Windows
+```bash
+npm install -g @angular/cli
+```
+
 ## Install and setup Firebase in Angular
 ### Paso 1: Instalar angularfire con npm
 ```bash
