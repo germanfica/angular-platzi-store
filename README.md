@@ -200,3 +200,7 @@ npm update
 npm install
 ng serve
 ```
+
+## Visual Studio Code Extensions
+
+- [Material Icon Theme by Philipp Kief](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
