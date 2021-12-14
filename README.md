@@ -9,7 +9,7 @@ npm install
 ng serve
 ```
 
-But you might want to update the npm modules:
+But you might want to update the node modules:
 ```bash
 npm update
 ng serve
