@@ -2,6 +2,14 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.5.
 
+## Run an exiting project
+Commands to run when you want to run an angular project for the first time:
+```bash
+npm update
+npm install
+ng serve
+```
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
@@ -191,14 +199,6 @@ npm version 7.5.2 detected.
 The Angular CLI currently requires npm version 6.
 
 Please install a compatible version to proceed (`npm install --global npm@6`).
-```
-
-## Run an exiting project
-Commands to run when you want to run an angular project for the first time:
-```bash
-npm update
-npm install
-ng serve
 ```
 
 ## Visual Studio Code Extensions
