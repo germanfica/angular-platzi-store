@@ -5,8 +5,13 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Run an exiting project
 Commands to run when you want to run an angular project for the first time:
 ```bash
-npm update
 npm install
+ng serve
+```
+
+But you might want to update the npm modules:
+```bash
+npm update
 ng serve
 ```
 
