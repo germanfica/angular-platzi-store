@@ -2,6 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.5.
 
+![platzi-store-preview](https://user-images.githubusercontent.com/15948693/149638753-c8e6a326-8de5-40f4-ab56-1d78aaa8fefa.png)
+
 ## Run an exiting project
 Commands to run when you want to run an angular project for the first time:
 ```bash
